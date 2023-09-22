@@ -1,0 +1,86 @@
+[
+    {
+        "src": "./public/ressources/croquis/livre01.png",
+        "title": "Livre, phare et tentacule",
+        "alt" : "croquis Livre, phare et tentacule",
+        "description" : "croquis Livre, phare et tentacule"
+        
+    },
+
+    {
+        "src": "./public/ressources/croquis/livre02.png",
+        "title": "Livre, idée et plantes",
+        "alt" : "croquis Livre, idée et plantes",
+        "description" : "croquis Livre, idée et plantes"
+    },
+
+    {
+        "src": "./public/ressources/croquis/livre03.png",
+        "title": "Livre, fée",
+        "alt" : "croquis Livre, fée",
+        "description" : "croquis Livre, fée"
+    },
+
+    {
+        "src": "./public/ressources/croquis/livre04.png",
+        "title": "Livre, licorne et sirène",
+        "alt" : "croquis Livre, licorne et sirène",
+        "description" : "croquis Livre, licorne et sirène"
+    },
+
+    {
+        "src": "./public/ressources/croquis/livre05.png",
+        "title": "Livre, sceptre et corbeaux",
+        "alt" : "croquis Livre, sceptre et corbeaux",
+        "description" : "croquis Livre, sceptre et corbeaux"
+    },
+
+    {
+        "src": "./public/ressources/croquis/livre06.png",
+        "title": "Livre, dragon",
+        "alt" : "croquis Livre, dragon",
+        "description" : "croquis Livre, dragon"
+    },
+
+    {
+        "src": "./public/ressources/croquis/tablette01.png",
+        "title": "Tablette, phare et tentacule",
+        "alt" : "croquis Livre, phare et tentacule",
+        "description" : "croquis Livre, phare et tentacule"
+    },
+
+    {
+        "src": "./public/ressources/croquis/tablette02.png",
+        "title": "Tablette, idée et plantes",
+        "alt" : "croquis Livre, idée et plantes",
+        "description" : "croquis Livre, idée et plantes"
+    },
+
+    {
+        "src": "./public/ressources/croquis/tablette03.png",
+        "title": "Tablette, fée",
+        "alt" : "croquis Livre, fée",
+        "description" : "croquis Livre, fée"
+    },
+
+    {
+        "src": "./public/ressources/croquis/tablette04.png",
+        "title": "Tablette, licorne et sirène",
+        "alt" : "croquis Livre, licorne et sirène",
+        "description" : "croquis Livre, licorne et sirène"
+    },
+
+    {
+        "src": "./public/ressources/croquis/tablette05.png",
+        "title": "Tablette, sceptre et corbeaux",
+        "alt" : "croquis Livre, sceptre et corbeaux",
+        "description" : "croquis Livre, sceptre et corbeaux"
+    },
+
+    {
+        "src": "./public/ressources/croquis/tablette06.png",
+        "title": "Tablette, dragon",
+        "alt" : "croquis Livre, dragon",
+        "description" : "croquis Livre, dragon"
+    }
+]

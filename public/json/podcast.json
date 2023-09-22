@@ -1,0 +1,34 @@
+[
+    {
+        "href": "https://www.podcast-guacamolesque.com/episodes-podcast/episode/acb5a750/2-beta-quiz-salon-du-livre-2019",
+        "src" : "./public/ressources/podcast/01_Beta_Quiz_2019.mp3",
+        "title" : "#2 - Beta Quiz - Salon du Livre 2019",
+        "time" : "35:55",
+        "resume" : "À l'occasion du salon du livre Paris 2019 qui a réuni tous nos auteurs sur notre petit stand, nous avons décidé d'enregistrer un épisode spécial jeu avec certains d'entre eux (les autres n'ayant malheureusement pas pu être des nôtres) ! "
+    },
+
+    {
+        "href": "https://www.podcast-guacamolesque.com/episodes-podcast/episode/21eba8f3/5-je-reve-mais-je-me-soigne",
+        "src" : "./public/ressources/podcast/02_Je-rêve-mais-je-me-soigne.mp3",
+        "title" : "#5 - Je rêve mais je me soigne",
+        "time" : "22:14",
+        "resume" : "Dans cet épisode de rêve nous accueillons Anthony Lucchini, auteur de la série des Nocturnes 🌚 parue dans notre maison d'édition ! En plus d'être un épisode où nous vous plongeons sous la couette de l'auteur (là où il passe le plus claire de son temps à rêver), cet épisode ouvre aussi la voie d'une série d'autres épisodes sur les auteurs de la maison ! Le tome 1 des Nocturnes est paru il y a maintenant 1 an de cela et c'est à l'occasion de la sortie prochaine du tome 2 (13 Mai 2019) que nous avons échangé avec Anthony et que nous lui avons soumis les questions de certains de ses lecteurs ! N'attendez plus et venez découvrir la belle voix d'Anthony et son imagination débordante !"
+    },
+
+    {
+        "href": "https://www.podcast-guacamolesque.com/episodes-podcast/episode/dbfc7fcf/22-antho-faut-se-reveiller",
+        "src" : "./public/ressources/podcast/03_Antho_faut_se_réveiller.mp3",
+        "title" : "2#2 - Antho, faut se réveiller...",
+        "time" : "22:03",
+        "resume" : "Bienvenue dans ce second épisode de la seconde saison de Guacamolesque ! Avec nous aujourd'hui, par téléphone, confinement oblige, nous avons dérangé Anthony Lucchini auteur des Nocturnes, une trilogie fantastique, dont le 3ème tome sort mardi 14 avril ! Avec lui, nous revenons sur ce que ça fait de terminer sa première trilogie, sur son expérience éditoriale, bref, il vous dira tout sur tout de ce que ça fait d'être un auteur chez nous !"
+    },
+
+    {
+        "href": "https://www.podcast-guacamolesque.com/episodes-podcast/episode/d11d7162/28-construction-narrative-fantastique-avec-anthony-lucchini",
+        "src" : "./public/ressources/podcast/04_Construction_narrative _fantastique_avec_Anthony_Lucchini.mp3",
+        "title" : "2#8 - Construction narrative : fantastique (avec Anthony Lucchini)",
+        "time" : "19:33",
+        "resume" : "En compagnie d'Anthony Lucchini, auteur de la trilogie fantastique Les Nocturnes, nous discutons de la constratuction narrative d'un roman fantastique et vous donnons quelques conseils pour vous lancer dans l'aventure !"
+    }
+
+]

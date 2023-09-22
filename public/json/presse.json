@@ -1,0 +1,45 @@
+[
+    {
+        "srcLien" : "https://www.francenetinfos.com/les-nocturnes-tome-1-leveil-danthony-lucchini-210847/",
+        "altLien" : "France net infos, article sur les nocturnes tome 1 l'éveil, d'Anthony Lucchini",
+        "date" : "06/07/2021",
+        "nomPress" : "France net infos",
+        "titleExtrait" : "Les Nocturnes Tome 1 : L’Éveil d’Anthony Lucchini",
+        "extrait" : "Ce premier tome de la saga “Les nocturnes” est remarquable. L’écriture est fluide, on se délecte de chaque page. On s’émerveille à la découverte de chaque monde, et encore une fois lorsqu’il s’est transformé en cauchemar. Alors que le premier tiers du livre est consacré à la mise en place du décor et des personnages qui sont bien plus complexes qu’il n’y paraît, l’action prend ensuite le dessus, et le danger rôde à chaque instant. Il y a tant à dire que je pourrais en écriture plusieurs pages. C’est une histoire qui s’adresse aussi bien aux adolescents qu’aux adultes. Ce premier tome, qui relève du fantastique, propose une histoire aussi fabuleuse que terrifiante. Anthony Lucchini est un auteur qu’il va falloir suivre de près !",
+        "srcImg" : "https://www.francenetinfos.com/wp-content/uploads/2016/09/Logo_Une.jpg",
+        "altImg" : "logo france net infos"
+    },
+
+    {
+        "srcLien" : "https://www.francebleu.fr/emissions/le-livre-de-l-ete/provence/les-nocturnes-d-anthony-lucchini",
+        "altLien" : "le livre de l'été émission radio, france bleu bouches-du-rhône",
+        "date" : "Dimanche 12 août 2018 à 7:47",
+        "nomPress" : "France bleu Bouches-du-rhône",
+        "titleExtrait" : "Les Nocturnes d'Anthony Lucchini",
+        "extrait" : "lorem",
+        "srcImg" : "",
+        "altImg" : ""
+    },
+
+    {
+        "srcLien" : "",
+        "altLien" : "",
+        "date" : "",
+        "nomPress" : "",
+        "titleExtrait" : "",
+        "extrait" : "",
+        "srcImg" : "",
+        "altImg" : ""
+    },
+
+    {
+        "srcLien" : "",
+        "altLien" : "",
+        "date" : "",
+        "nomPress" : "",
+        "titleExtrait" : "",
+        "extrait" : "",
+        "srcImg" : "",
+        "altImg" : ""
+    }
+]
