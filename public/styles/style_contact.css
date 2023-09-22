@@ -1,0 +1,643 @@
+/* pour que le footer soit bien en bas lorsqu'il y a des éléments dans le body */
+/* .container-header,
+.container-footer {
+  position: sticky;
+} */
+
+/* .container-footer {
+  position: absolute;
+  bottom: 0;
+} */
+
+/* couleur lien "me contacter" dans le footer actif */
+.contact {
+  color: var(--bleu);
+}
+
+p,
+label,
+input,
+textarea {
+  font-size: 0.8em;
+  font-weight: 500;
+}
+
+/* grid container contact */
+.container_contact {
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: 1fr 80% 1fr;
+  grid-template-rows: 4% 7% 72% 1fr;
+  gap: 0px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". petit ."
+    ". toutFormulaire ."
+    ". . .";
+}
+
+/* la selection */
+.petit {
+  grid-area: petit;
+  display: flex;
+  flex-direction: row;
+}
+
+/* les deux formulaires différents */
+.toutFormulaire {
+  grid-area: toutFormulaire;
+  margin-top: 1vh;
+  border: 1.5px solid var(--bleu);
+  border-radius: 0.3em;
+  box-shadow: 4px 5px 6px 0px #d0d0d0f0;
+}
+
+/* le style formulaire professionnels */
+.contactFormUn .gauche {
+  gap: 0px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "prems . un"
+    "deux . trois"
+    "quatre . cinq"
+    "six . sept"
+    "huit . neuf"
+    "paragraphe paragraphe paragraphe";
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prems {
+  grid-area: prems;
+}
+.un {
+  grid-area: un;
+}
+.deux {
+  grid-area: deux;
+}
+.trois {
+  grid-area: trois;
+}
+.quatre {
+  grid-area: quatre;
+}
+.cinq {
+  grid-area: cinq;
+}
+.six {
+  grid-area: six;
+}
+.sept {
+  grid-area: sept;
+}
+.huit {
+  grid-area: huit;
+}
+.neuf {
+  grid-area: neuf;
+}
+.paragraphe {
+  grid-area: paragraphe;
+}
+
+/* style formulaire lecteurs */
+.contactForm .gauche {
+  display: grid;
+  gap: 0px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "formDiv formDiv formDiv"
+    "alphas . beta"
+    "capa . delta"
+    "epzilon . falbala"
+    "paragraphe paragraphe paragraphe";
+  justify-content: space-between;
+  align-items: center;
+}
+
+.formDiv {
+  grid-area: formDiv;
+}
+.alphas {
+  grid-area: alphas;
+}
+.beta {
+  grid-area: beta;
+}
+.capa {
+  grid-area: capa;
+}
+.delta {
+  grid-area: delta;
+}
+.epzilon {
+  grid-area: epzilon;
+}
+.falbala {
+  grid-area: falbala;
+}
+
+/* couleur de font */
+label,
+.gauche p {
+  color: black;
+  margin-left: 5vh;
+}
+
+input {
+  border: 0.5px solid var(--bleu);
+  border-radius: 0.3em;
+  background-color: var(--moinsBlanc);
+  height: 4vh;
+  padding-left: 0.8vw;
+  overflow: scroll;
+}
+
+::placeholder {
+  color: var(--gris);
+}
+
+.captcha {
+  border: 1px solid black;
+  height: 5vh;
+  width: 10%;
+  font-size: 0.75em;
+  /* transform: translateX(27.5vw); */
+  margin: 0;
+  display: none;
+}
+
+/* début la partie civilités du form lecteurs */
+/* le grid des deux formulaires */
+/* .contactForm,
+.contactFormUn {
+  height: 62vh;
+  display: grid;
+  grid-template-columns: 47% 6% 47%;
+  grid-template-rows: 90%;
+  gap: 0px 10px;
+  grid-auto-flow: row;
+  grid-template-areas: "gauche . droite";
+} */
+
+/* les div dans la balise <form class="contactForm"> du formulaire pr lecteurs */
+.contactForm .gauche,
+.contactFormUn .gauche {
+  /* display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center; */
+  margin-left: 2.5vw;
+  margin-bottom: 4vh;
+  display: grid;
+}
+
+/* les balises <p> des div du formulaire des lecteurs */
+.contactForm div p,
+.contactFormUn div p {
+  margin: 0;
+}
+
+/* les deux inputs type radio (Mr et Mme) */
+[type="radio"] {
+  overflow: auto;
+  width: 1.5em;
+  margin-left: 2vw;
+}
+
+/* les labels des inputs de type radio */
+[for="MME"],
+[for="MR"] {
+  margin-left: 0.5vw;
+  height: 3.2em;
+}
+
+.radio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+}
+/* fin partie civilités de form lecteurs */
+
+/* pièce jointe */
+.PJ {
+  height: 2.6vh;
+}
+
+/* le textarea */
+[for="Message"] + textarea {
+  margin: 2vh 0;
+  padding: 2.5vh;
+  border: 0.5px solid var(--bleu);
+  border-radius: 0.3em;
+  background-color: var(--moinsBlanc);
+}
+
+/* le bouton envoyez */
+input[type="submit"] {
+  margin: 0 5vh 0 0;
+  background-color: var(--vert);
+  color: var(--moinsBlanc);
+  font-weight: 700;
+  border: none;
+  border-radius: 0.4em;
+  box-shadow: 2px 2px 6px 0px #d1d1d1f0;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.erreurChamp p {
+  color: var(--champErreur);
+  margin: 2vh 0;
+  font-weight: 600;
+}
+
+.cacheErreur {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  #bande_bas {
+    position: fixed;
+    bottom: 0px;
+    height: 70px;
+    left: 0px;
+    right: 0px;
+    overflow: hidden;
+  }
+
+  #zero {
+    height: 100%;
+    background-image: url(../ressources/fond_site/fondlivrpapier72dpi-opacité20-moyen.png);
+    background-size: cover;
+  }
+  /* début la partie civilités du form lecteurs */
+  /* le grid des deux formulaires */
+  .contactForm,
+  .contactFormUn {
+    height: 56vh;
+    display: grid;
+    grid-template-columns: 47% 6% 47%;
+    grid-template-rows: 100%;
+    gap: 0px 10px;
+    grid-auto-flow: row;
+    grid-template-areas: "gauche . droite";
+  }
+  .gauche {
+    grid-area: gauche;
+  }
+
+  /* le style formulaire professionnels */
+  .contactFormUn .gauche {
+    grid-template-columns: 25% 1fr 73%;
+    grid-template-rows: 17% 17% 17% 17% 17% 20%;
+    line-height: 2.8em;
+    padding-top: 3vh;
+  }
+
+  .prems,
+  .un,
+  .deux,
+  .trois,
+  .quatre,
+  .cinq,
+  .six,
+  .sept,
+  .huit,
+  .neuf {
+    width: 85%;
+  }
+
+  /* style formulaire lecteurs */
+  .contactForm .gauche {
+    grid-template-columns: 25% 1fr 73%;
+    grid-template-rows: 20% 20% 20% 20% 20% 5%;
+    line-height: 2.8em;
+    padding-top: 3vh;
+  }
+
+  /* le message après les inputs de gauche */
+  .gauche p:first-of-type {
+    line-height: 1.8em;
+  }
+
+  .droite {
+    grid-area: droite;
+    width: 100%;
+  }
+
+  .droite div p {
+    margin: 3.5vh 0 3vh 0;
+    width: 88%;
+  }
+
+  /* pièce jointe */
+  #piece_jointe {
+    width: 50%;
+    padding-left: 0;
+    height: 2.2vh;
+    margin-top: -14vh;
+    width: 60%;
+    height: 2.5vh;
+  }
+
+  /* DEBUT style input type file */
+  input[type="file"] {
+    border: 0.5px solid var(--bleu);
+  }
+
+  /* manière plus longue */
+  /* label[for="piece_jointe"] input[type="file"] {
+    position: absolute;
+    top: -1000px;
+  }
+  label[for="piece_jointe"] {
+    cursor: pointer;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin: 5px;
+    background: #dddddd;
+    display: inline-block;
+  }
+  label[for="piece_jointe"]:hover {
+    background: #5cbd95;
+  }
+  label[for="piece_jointe"]:active {
+    background: #9fa1a0;
+  }
+  label[for="piece_jointe"]:invalid + span {
+    color: #000000;
+  }
+  label[for="piece_jointe"]:valid + span {
+    color: #ffffff;
+  } */
+  /* manière plus longue */
+
+  /* manière plus courte */
+  /* label[for="piece_jointe"] {
+    cursor: pointer;
+    background-color: lightblue;
+    color: #ffffff;
+    padding: 10px 20px;
+  }
+  #piece_jointe {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+  } */
+  /* manière plus courte */
+
+  /* FIN input type style */
+
+  /* la seconde div à l'intérieur de la div class="droite" 
+    donc la div du message de droite*/
+  .droite div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* label du message à écrire */
+  [for="Message"] {
+    margin: 1.5vh 2vw -0.5vh 0;
+    width: 20%;
+  }
+
+  /* le textarea */
+  [for="Message"] + textarea {
+    height: 20vh;
+    width: 85%;
+  }
+
+  /* le bouton envoyez */
+  input[type="submit"] {
+    height: 5vh;
+    width: 18%;
+    font-size: 0.9em;
+  }
+
+  .miniMentions {
+    grid-area: miniMentions;
+    font-size: 0.7em;
+    margin-left: 5vh;
+    /* margin-top: -4vh; */
+    color: black;
+  }
+  .captcha {
+    width: 20%;
+  }
+
+  .btnenvoyer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  input[type="submit"] {
+    padding: 0;
+  }
+
+  /* fin grid container contact */
+}
+
+/* @media (min-width : 768px) and (max-width: 992px) {
+   
+} */
+
+/* format mobile */
+@media (max-width: 768px) {
+  /* pour que le footer soit bien en bas lorsqu'il y a des éléments dans le body */
+  /* .container-header, .container-footer {
+        position: static;
+    } */
+
+  body {
+    height: 100%;
+    width: 100%;
+  }
+
+  #bandeHaut {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    overflow: hidden;
+    z-index: 900;
+  }
+
+  .container_contact {
+    /* le !important  veut dire qu'on lui demande de s'en occuper !!! */
+    /* margin-bottom: 20em !important; */
+
+    position: absolute;
+    top: 80px;
+    left: 0px;
+    right: 0px;
+    overflow: auto;
+    height: 58em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* le sélecteur */
+  .petit {
+    width: 70%;
+  }
+
+  .petit p {
+    width: 70%;
+  }
+  /* fin sélecteur */
+
+  .toutFormulaire {
+    width: 90%;
+  }
+
+  #zero {
+    height: 50vh;
+    background-image: url(../ressources/fond_site/fondlivrpapier72dpi-opacité20-moyen.png);
+    background-size: 50em;
+  }
+
+  #bande_bas {
+    position: fixed;
+    bottom: 0px;
+    height: 70px;
+    left: 0px;
+    right: 0px;
+    overflow: hidden;
+  }
+
+  /* le style des deux formulaires contactForm */
+  .contactFormUn .gauche {
+    grid-template-columns: 30% 1fr 68%;
+    grid-template-rows: 17% 17% 17% 17% 17% 25%;
+    line-height: 1.5em;
+    padding: 2vh;
+    margin: 0;
+    height: 55vh;
+  }
+
+  .gauche label {
+    margin-left: 0vh;
+  }
+
+  .prems,
+  .un,
+  .deux,
+  .trois,
+  .quatre,
+  .cinq,
+  .six,
+  .sept,
+  .huit,
+  .neuf {
+    width: 90%;
+    margin-right: -2vw;
+  }
+
+  /* style formulaire lecteurs */
+  .contactForm .gauche {
+    grid-template-columns: 30% 1fr 68%;
+    grid-template-rows: 17% 17% 17% 17% 25%;
+    line-height: 1.5em;
+    padding: 2vh;
+    margin: 0;
+    height: 55vh;
+  }
+
+  .alphas,
+  .beta,
+  .capa,
+  .delta,
+  .epzilon,
+  .falbala {
+    width: 90%;
+  }
+
+  /* les deux input type radio (Mr et Mme) */
+  [type="radio"] {
+    overflow: auto;
+    width: 1em;
+    margin-top: -1.5vh;
+    margin-left: 3.5vw;
+  }
+
+  /* les labels des input de type radio */
+  [for="MME"],
+  [for="MR"] {
+    margin-left: 0;
+    margin-top: 1.25vh;
+  }
+
+  .paragraphe,
+  .droite div p {
+    font-size: 0.75em;
+    margin: 3vh 3vw;
+    width: 90%;
+    line-height: 1em;
+  }
+
+  /* le titre civilités */
+  #civilite {
+    font-size: 0.8em;
+    width: 25vw;
+  }
+
+  /* pièce jointe */
+  .PJ {
+    width: 80%;
+    height: 3.5vh;
+    padding: 0;
+    /* 
+    border: none; */
+  }
+
+  /* la seconde div à l'intérieur de la div class="droite" 
+    donc la div du message de droite*/
+  .droite div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* label du message */
+  [for="Message"] {
+    margin-left: -55vw;
+    margin-top: 1.5vh;
+  }
+  /* le textarea */
+  [for="Message"] + textarea {
+    height: 20vh;
+    width: 80%;
+  }
+  .miniMentions {
+    grid-area: miniMentions;
+    font-size: 0.6em;
+    margin-left: 1.5vw;
+  }
+
+  /* .captcha {
+    width: 20%;
+  } */
+
+  .btnenvoyer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  input[type="submit"] {
+    padding: 1vw 2vw;
+    margin-left: 55vw;
+    margin-right: 0;
+  }
+}

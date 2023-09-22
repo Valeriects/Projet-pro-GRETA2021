@@ -1,0 +1,137 @@
+[
+    {
+        "src" : "./public/ressources/illustrations/cahier_rêve_RVB_72dpi.jpg",
+        "title" : "Cahier des rêves",
+        "alt" : "illustration cahier des rêves",
+        "description" : "illustration couleur cahier des rêves du chapitre 1 du tome 1 l'éveil de la trilogie Les Nocturnes.",
+        "auteur" : "Valdra",
+        "lien_auteur" : ""
+    },
+
+    {
+        "src" : "./public/ressources/illustrations/salle_des_reves_RVB_72dpi.jpg",
+        "title" : "Salle des rêves",
+        "alt" : "illustration salle ds rêves",
+        "description" : "illustration couleur salle des rêves du tome 1 l'éveil de la trilogie Les Nocturnes.",
+        "auteur" : "Valdra",
+        "lien_auteur" : ""
+    },
+    
+    {
+        "src" : "./public/ressources/illustrations/3_nains_gelule_rêve_parc_attraction_RVB_72dpi.jpg",
+        "title" : "Rêve parc d'attration",
+        "alt" : "illustration rêve parc d'attration",
+        "description" : "illustration couleur rêve parc d'attration du tome 1 l'éveil de la trilogie Les Nocturnes.",
+        "auteur" : "Valdra",
+        "lien_auteur" : ""
+    },
+
+    {
+        "src" : "./public/ressources/illustrations/coupole_hitra_rvb_72dpi.jpg",
+        "title" : "Coupole hitra",
+        "alt" : "illustration coupole hitra",
+        "description" : "illustration couleur coupole hitra du tome 1 l'éveil de la trilogie Les Nocturnes.",
+        "auteur" : "Valdra",
+        "lien_auteur" : ""
+    },
+
+    {
+        "src" : "./public/ressources/illustrations/Hitra_vs_flamelures_rvb_72dpi.jpg",
+        "title" : "Hitra vs flamelures",
+        "alt" : "illustration Hitra vs flamelures",
+        "description" : "illustration couleur Hitra vs flamelures du tome 1 l'éveil de la trilogie Les Nocturnes.",
+        "auteur" : "Valdra",
+        "lien_auteur" : ""
+    },
+
+    {
+        "src" : "./public/ressources/illustrations/Allymantia_reveil_rvb_72dpi.jpg",
+        "title" : "Allymantia le réveil",
+        "alt" : "illustration Allymantia le réveil",
+        "description" : "illustration couleur Allymantia le réveil du tome 1 l'éveil de la trilogie Les Nocturnes.",
+        "auteur" : "Valdra",
+        "lien_auteur" : "#"
+    },
+
+    {
+        "src" : "./public/ressources/illustrations/allymantia1_72dpi.jpg",
+        "title" : "Allymantia réveil",
+        "alt" : "illustration Allymantia réveil",
+        "description" : "illustration couleur Allymantia réveil du tome 1 l'éveil de la trilogie Les Nocturnes.",
+        "auteur" : "Valdra",
+        "lien_auteur" : ""
+    },
+
+    {
+        "src" : "./public/ressources/illustrations/Reine_et_flocs_RVB_72dpi.jpg",
+        "title" : "Reine et flocs",
+        "alt" : "illustration Reine et flocs",
+        "description" : "illustration couleur Reine et flocs du tome 1 l'éveil de la trilogie Les Nocturnes.",
+        "auteur" : "Valdra",
+        "lien_auteur" : ""
+    },
+
+    {
+        "src" : "./public/ressources/illustrations/Francky_sauve_ Erwan_RVB_72dpi.jpg",
+        "title" : "Francky sauve Erwan",
+        "alt" : "illustration Francky sauve Erwan",
+        "description" : "illustration couleur Francky sauve Erwan du tome 1 l'éveil de la trilogie Les Nocturnes.",
+        "auteur" : "Valdra",
+        "lien_auteur" : ""
+    },
+
+    {
+        "src" : "./public/ressources/illustrations/ange_et_remi_RVB_72dpi.jpg",
+        "title" : "L'ange et Rémi",
+        "alt" : "illustration L'ange et Rémi",
+        "description" : "illustration couleur L'ange et Rémi du tome 1 l'éveil de la trilogie Les Nocturnes.",
+        "auteur" : "Valdra",
+        "lien_auteur" : ""
+    },
+
+    {
+        "src" : "./public/ressources/illustrations/candélabre_rvb_72 dpi.jpg",
+        "title" : "Le candélabre",
+        "alt" : "illustration Le candélabre",
+        "description" : "illustration couleur Le candélabre du tome 1 l'éveil de la trilogie Les Nocturnes.",
+        "auteur" : "Valdra",
+        "lien_auteur" : ""
+    },
+
+    {
+        "src" : "./public/ressources/illustrations/Facettes_RVB_72dpi.jpg",
+        "title" : "Les facettes",
+        "alt" : "illustration Les facettes",
+        "description" : "illustration couleur Les facettes du tome 1 l'éveil de la trilogie Les Nocturnes.",
+        "auteur" : "Valdra",
+        "lien_auteur" : ""
+    },
+
+    {
+        "src" : "./public/ressources/illustrations/NB_horloge_murale_rvb_72DPI.jpg",
+        "title" : "Horloge murale",
+        "alt" : "illustration Horloge murale",
+        "description" : "illustration en noir et blanc Horloge murale du tome 1 l'éveil de la trilogie Les Nocturnes.",
+        "auteur" : "Valdra",
+        "lien_auteur" : ""
+    },
+
+    {
+        "src" : "./public/ressources/illustrations/NB_Couture_livre_rvb_72dpi.jpg",
+        "title" : "Couture livre",
+        "alt" : "illustration Couture livre",
+        "description" : "illustration en noir et blanc Couture livre du tome 1 l'éveil de la trilogie Les Nocturnes.",
+        "auteur" : "Valdra",
+        "lien_auteur" : ""
+    },
+
+    {
+        "src" : "./public/ressources/illustrations/NB_hibou_bijou_rvb_72dpi.jpg",
+        "title" : "Hibou bijou",
+        "alt" : "illustration Hibou bijou",
+        "description" : "illustration en noir et blanc Hibou bijou du tome 1 l'éveil de la trilogie Les Nocturnes.",
+        "auteur" : "Valdra",
+        "lien_auteur" : ""
+    }
+    
+]

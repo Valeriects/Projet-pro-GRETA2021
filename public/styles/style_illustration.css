@@ -1,0 +1,213 @@
+.lien,
+.title {
+  color: black;
+  font-family: "Arimo", sans-serif;
+}
+
+#illustrations1,
+#bonus4 {
+  display: grid;
+  /* grid-template-columns: repeat(6, 15%);
+    grid-template-rows : repeat(, 30%); */
+  gap: 5vh 0;
+  justify-content: center;
+  text-align: center;
+  height: 70vh;
+  margin: 2vh 0 4vh 0;
+}
+
+.multiplicationIllustration,
+.multipelissanne {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .illimage {
+   height: 80%;
+} */
+
+.lien:hover {
+  color: var(--bleu);
+}
+
+.title {
+  font-size: 0.9em;
+  font-weight: 600;
+  margin: 1vh 0 0 0;
+}
+
+.lien {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 400;
+}
+
+.cache {
+  /* display: none; */
+  visibility: hidden;
+}
+
+/* au survol, on zoom sur chaque image */
+.illimage:hover,
+.illimagePelissanne:hover {
+  transform: scale(4);
+  position: static;
+  top: 50%;
+  left: 50%;
+}
+
+/* bouton retour vers le haut */
+#retourHaut {
+  width: 3vw;
+}
+
+.fa-sort-up {
+  font-size: 1.7em;
+  margin-top: 0.4em;
+}
+/* fin bouton retour vers le haut */
+
+/* responsive desktop */
+@media screen and (min-width: 768px) {
+  #illustrations1,
+  #bonus4 {
+    grid-template-columns: repeat(6, 15%);
+    grid-template-rows: repeat(4, 30%);
+  }
+
+  .multiplicationIllustration,
+  .multipelissanne {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .illimage,
+  .illimagePelissanne {
+    height: 80%;
+  }
+}
+
+/* format mobile */
+@media (max-width: 768px) {
+  #illustrations1,
+  #bonus4 {
+    /* grid-template-columns: 1% 10% 1%; */
+    /* grid-template-rows : repeat(3, 30%); */
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(4, 10%);
+  }
+
+  .multiplicationIllustration,
+  .multipelissanne {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .illimage,
+  .illimagePelissanne {
+    height: 100%;
+  }
+
+  .legende {
+    display: none;
+  }
+
+  #retourHaut {
+    width: 7.5vw;
+    transform: translateX(-3vw);
+  }
+
+  .fa-sort-up {
+    font-size: 1.2em;
+  }
+}
+
+/* ********************** test pr image */
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}

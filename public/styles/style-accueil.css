@@ -1,0 +1,128 @@
+main {
+  width: 100%;
+  height: 76%;
+}
+
+.nouveaute {
+  border: 1.5px solid var(--bleu);
+  border-radius: 0.3em;
+  box-shadow: 4px 5px 6px 0px #d0d0d0f0;
+  margin: 1vh;
+  padding: 1vh;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--gris);
+  font-weight: bold;
+}
+
+.agendaAccueil {
+  border: 1.5px solid var(--bleu);
+  border-radius: 0.3em;
+  box-shadow: 4px 5px 6px 0px #d0d0d0f0;
+}
+
+#grand {
+  color: var(--bleu);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+#grand p {
+  margin: 0;
+  padding-bottom: 1vh;
+}
+
+.event {
+  color: black;
+}
+
+.textArticle {
+  font-size: 1em;
+  /* width: 50%; */
+}
+
+@media screen and (min-width: 768px) {
+  #ensemble {
+    display: grid;
+    grid-template-columns: 5% 28% 27% 25% 5%;
+    grid-template-rows: 25% 75%;
+    grid-template-areas:
+      ". identite . agendaAccueil ."
+      ". identite nouveaute agendaAccueil .";
+    column-gap: 2vw;
+    /* align-items: center; */
+    align-items: end;
+    padding: 2vh;
+    height: 95%;
+  }
+
+  .identite {
+    grid-area: identite;
+    /* width: 100%; */
+  }
+
+  .nouveaute {
+    grid-area: nouveaute;
+    width: 90%;
+  }
+
+  .agendaAccueil {
+    grid-area: agendaAccueil;
+    margin: 1vh 1vh;
+    padding: 1vh 1vw;
+    height: 50vh;
+  }
+
+  .couv {
+    width: 50%;
+  }
+
+  .portrait {
+    width: 90%;
+  }
+
+  .imgevent {
+    width: 100%;
+    border-radius: 0.7em 0.7em 0 0;
+    height: 10vh;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 768px) {
+  #ensemble {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vh;
+    height: 98%;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .identite {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .portrait {
+    width: 70%;
+  }
+
+  .imgevent {
+    width: 100%;
+    border-radius: 0.7em 0.7em 0 0;
+    height: 10vh;
+    object-fit: cover;
+  }
+
+  .nouvaute {
+    width: 80%;
+  }
+
+  .couv {
+    width: 50%;
+  }
+}

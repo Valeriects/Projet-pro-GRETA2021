@@ -1,0 +1,218 @@
+/* le style générique aux différents formats */
+.article,
+.articleDelete {
+  border: 1.5px solid var(--bleu);
+  border-radius: 0.3em;
+  box-shadow: 4px 5px 6px 0px #d0d0d0f0;
+  padding: 3vh;
+  margin-left: 0;
+}
+
+.article p {
+  width: 90%;
+}
+
+/* champ du message */
+[for="msg"] + textarea {
+  margin: 0 0;
+  padding: 2vh;
+  border: 0.5px solid var(--bleu);
+  border-radius: 0.3em;
+  background-color: var(--moinsBlanc);
+  height: 25vh;
+  width: 90%;
+  margin-top: 2vh;
+}
+
+/* le bouton pour envoyer */
+input[type="submit"] {
+  margin: 2vh 0 0 0;
+  height: 5vh;
+  width: 6vw;
+  padding: 0;
+  font-size: 0.9em;
+  background-color: var(--vert);
+  color: var(--moinsBlanc);
+  font-weight: 600;
+  border: none;
+  border-radius: 0.4em;
+  box-shadow: 2px 2px 6px 0px #d1d1d1f0;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.success {
+  color: var(--bleu);
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* format au dessus de mobile */
+@media (min-width: 768px) {
+  /* les mains des deux pages */
+  #loginAvis,
+  #loginDelete {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 76%;
+  }
+  #loginAvis {
+    align-items: baseline;
+    margin-top: 8vh;
+  }
+
+  #loginDelete {
+    align-items: center;
+  }
+
+  #englobe {
+    width: 45%;
+  }
+
+  /* taille article */
+  .article {
+    width: 90%;
+  }
+
+  .articleDelete {
+    width: 40%;
+  }
+
+  /* div des formulaires */
+  #avisOne,
+  #avisOneDelete {
+    width: 40%;
+  }
+
+  #avisOneDelete {
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* formulaire page deleteAvis.php */
+  #formDelete {
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* phrase demandant si on veut riament supprimer l'avis */
+  .warning,
+  .conseil {
+    color: var(--bleu);
+    font-weight: bolder;
+    font-size: 1.3em;
+  }
+
+  .warningMob {
+    display: none;
+  }
+  /* fin phrase demandant si on veut riament supprimer l'avis */
+
+  /* enveloppe champs obligatoire et input modifier */
+  #envoisModif {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+  }
+
+  /* phrase champs obligatoires */
+  #oblig {
+    font-size: 0.8em;
+    margin-bottom: 0;
+  }
+
+  /* formulaire page loginAvis.php */
+  #formUp {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 2vh;
+  }
+}
+
+/* format mobile */
+@media (max-width: 768px) {
+  #loginAvis,
+  #loginDelete {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 76%;
+    overflow: auto;
+  }
+
+  #loginAvis {
+    height: 75%;
+  }
+  /* taille article */
+  .article {
+    width: 80%;
+  }
+
+  .articleDelete {
+    width: 80%;
+  }
+  /* div des formulaires */
+  #avisOne,
+  #avisOneDelete {
+    width: 80%;
+  }
+
+  .warning {
+    display: none;
+  }
+
+  .warningMob,
+  .conseil {
+    display: block;
+    color: var(--bleu);
+    font-weight: bolder;
+    font-size: 1.3em;
+    text-align: center;
+  }
+
+  #formDelete {
+    margin-bottom: 2vh;
+  }
+
+  /* enveloppe champs obligatoire et input modifier */
+  #envoisModif,
+  #englobe {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #englobe {
+    align-items: center;
+    margin-top: 10vh;
+    height: 76vh;
+    margin-bottom: 4vh;
+  }
+
+  /* le supprime delete */
+  #envois {
+    width: 20vw;
+  }
+
+  /* phrase champs obligatoires */
+  #oblig {
+    font-size: 0.8em;
+    margin-top: -0.5vh;
+    margin-bottom: 0;
+  }
+
+  /* formulaire page loginAvis.php */
+  #formUp {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 2vh;
+  }
+}

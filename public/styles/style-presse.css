@@ -1,0 +1,145 @@
+/* pour que le footer soit bien en bas lorsqu'il y a des éléments dans le body */
+.container-header,
+.container-footer {
+  position: static;
+}
+
+/* couleur onglet active */
+.presse {
+  background-color: var(--bleuOnglet);
+}
+
+/* style de la div id="colonne"  */
+#colonne {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+/* style du la liste ul */
+#press {
+  list-style: none;
+  /* width: 60%; */
+  padding: 0;
+}
+
+/* style de chaque li (le html dans le JS) */
+li {
+  margin: 5vh 0;
+}
+
+/* style du cadre qui se toruve dans chaque li */
+.cadre {
+  border: 2.5px solid var(--bleu);
+  border-radius: 0.3em;
+  box-shadow: 4px 5px 6px 0px #d0d0d0f0;
+  background-color: var(--moinsBlanc);
+  padding: 2vh 4vw;
+}
+
+/* les liens vers les pages des sites de chaque cadre */
+.cadre a {
+  color: black;
+  font-family: "Arimo", sans-serif;
+}
+
+/* au survol de la souris, le lien devient bleu */
+.cadre a:hover {
+  color: var(--bleu);
+}
+
+@media screen and (min-width: 1600px) {
+  /* changement de la taille width de la liste ul */
+  #press {
+    width: 60%;
+  }
+
+  /* mettre les changement de taille police */
+  .cadre img {
+    width: 25%;
+  }
+
+  .cadre h3 {
+    font-size: 2em;
+    margin-bottom: 1vh;
+  }
+
+  .cadre h4 {
+    font-size: 1.8em;
+    margin: 1vh 0;
+  }
+
+  .cadre p,
+  .cadre a {
+    font-size: 1.2em;
+  }
+
+  #retourHaut {
+    width: 3vw;
+  }
+
+  .fa-sort-up {
+    font-size: 1.7em;
+    margin-top: 0.4em;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1600px) {
+  /* changement de la taille width de la liste ul */
+  #press {
+    width: 60%;
+  }
+
+  .cadre h3 {
+    font-size: 1.4em;
+    margin: 1vh 0;
+  }
+
+  .cadre h4 {
+    font-size: 1.2em;
+    margin: 1vh 0;
+  }
+
+  #retourHaut {
+    width: 3vw;
+    transform: translateX(-2vw);
+  }
+
+  .fa-sort-up {
+    font-size: 1.7em;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  /* changement de la taille width de la liste ul */
+  #press {
+    width: 70%;
+  }
+
+  #retourHaut {
+    width: 4vw;
+    transform: translateX(-3vw);
+  }
+
+  .fa-sort-up {
+    font-size: 1.7em;
+  }
+}
+
+/* format mobile */
+@media (max-width: 768px) {
+  /* changement de la taille width de la liste ul */
+  #press {
+    width: 90%;
+  }
+
+  #retourHaut {
+    width: 7.5vw;
+    transform: translateX(-3vw);
+  }
+
+  .fa-sort-up {
+    font-size: 1.2em;
+  }
+}

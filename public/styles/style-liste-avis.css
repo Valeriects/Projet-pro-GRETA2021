@@ -1,0 +1,297 @@
+html,
+body {
+  overflow: hidden;
+}
+/* pour que le footer soit bien en bas lorsqu'il y a des éléments dans le body */
+/* .container-header,
+.container-footer {
+  position: static;
+} */
+
+/* le main */
+#listeAvis {
+  width: 100%;
+  text-align: center;
+  /* overflow-y: scroll; */
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#choixTome,
+.retour p {
+  color: var(--bleu);
+  font-weight: bold;
+}
+
+.retour button {
+  margin: 0;
+}
+
+#bouge {
+  border: 1.5px solid var(--bleuOnglet);
+  border-radius: 0.3em;
+  box-shadow: 4px 5px 6px 0px #d0d0d0f0;
+  padding: 2vh;
+  background-color: var(--moinsBlanc);
+  z-index: 1;
+}
+
+.com {
+  background-color: var(--white) !important;
+  z-index: 99;
+}
+
+@media screen and (min-width: 768px) {
+  .liste {
+    width: 100%;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 3% 18% 60% 12% 5%;
+    grid-template-rows: 13% 85% 2%;
+    grid-template-areas:
+      ". titre titre titre ."
+      ". tome bouge retour ."
+      ". . . . .";
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .titre {
+    grid-area: titre;
+  }
+
+  .tome {
+    grid-area: tome;
+    margin-top: -1.5vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+  }
+  .bouge {
+    grid-area: bouge;
+  }
+  .retour {
+    grid-area: retour;
+  }
+
+  .gauche {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: black;
+    align-items: center;
+    font-family: "Arimo", sans-serif;
+    width: 80%;
+    margin-bottom: 2.5vh;
+  }
+
+  .left {
+    border: 1.5px solid rgba(0, 0, 0, 0);
+    border-radius: 0.3em;
+    padding: 0.5vh;
+  }
+
+  .left:hover {
+    border: 1.5px solid var(--bleu);
+    border-radius: 0.3em;
+    box-shadow: 4px 5px 6px 0px #d0d0d0f0;
+    padding: 0.5vh;
+  }
+
+  /* la class que je toggle dans le js */
+  .encradrement {
+    border: 1.5px solid var(--bleu);
+    border-radius: 0.3em;
+    box-shadow: 4px 5px 6px 0px #d0d0d0f0;
+    padding: 0.5vh;
+  }
+
+  .readAvis {
+    width: 100%;
+  }
+
+  .tomeUnit {
+    width: 20%;
+  }
+
+  #bouge {
+    width: 90%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: 2vh;
+  }
+
+  /* l'article */
+  .com {
+    width: 93%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 3vh;
+    border: 1.5px solid var(--bleu);
+    border-radius: 0.3em;
+    box-shadow: 4px 5px 6px 0px #d0d0d0f0;
+    margin: 1vh 0;
+  }
+
+  h1 {
+    font-size: 1.4em !important;
+    padding-top: 0 !important;
+    padding-bottom: 1.5vh;
+  }
+
+  h2 {
+    font-size: 1.2em;
+    color: var(--bleu);
+  }
+
+  .date,
+  .img p {
+    font-style: italic;
+    font-size: 0.8em;
+  }
+
+  .commentaire {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-header,
+  .container-footer {
+    /* position: static; */
+    z-index: 99;
+  }
+
+  #listeAvis {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    text-align: center;
+    overflow-y: scroll;
+  }
+
+  .liste {
+    width: 100%;
+    height: 100vh;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    /* justify-items: center; */
+    /* justify-content: center; */
+    align-items: center;
+  }
+
+  .tome {
+    margin-top: -1.5vh;
+    width: 85%;
+    height: 20vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    background-color: var(--moinsBlanc);
+    padding: 0.5vh;
+    border: 1.5px solid var(--bleuOnglet);
+    border-radius: 0.3em;
+  }
+
+  .gauche {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: black;
+    align-items: center;
+    font-family: "Arimo", sans-serif;
+    width: 80%;
+    margin-bottom: 2.5vh;
+  }
+
+  .left {
+    border: 1.5px solid rgba(0, 0, 0, 0);
+    border-radius: 0.3em;
+    padding: 0.5vh;
+  }
+
+  .left:hover {
+    border: 1.5px solid var(--bleu);
+    border-radius: 0.3em;
+    box-shadow: 4px 5px 6px 0px #d0d0d0f0;
+    padding: 0.5vh;
+  }
+
+  /* la class que je toggle dans le js */
+  .encadrement {
+    border: 1.5px solid var(--bleu);
+    border-radius: 0.3em;
+    box-shadow: 4px 5px 6px 0px #d0d0d0f0;
+    padding: 0.5vh;
+  }
+
+  .readAvis {
+    width: 100%;
+    margin: 0;
+  }
+
+  .tomeUnit {
+    width: 20%;
+  }
+
+  #bouge {
+    width: 80%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: 2vh;
+  }
+
+  /* l'article */
+  .com {
+    width: 85%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 3vh;
+    border: 1.5px solid var(--bleu);
+    border-radius: 0.3em;
+    box-shadow: 4px 5px 6px 0px #d0d0d0f0;
+    margin: 1vh 0;
+  }
+
+  h1 {
+    font-size: 1.4em !important;
+    padding-top: 0 !important;
+    padding-bottom: 1.5vh;
+  }
+
+  h2 {
+    font-size: 1.2em;
+    color: var(--bleu);
+  }
+
+  .date,
+  .img p {
+    font-style: italic;
+    font-size: 0.8em;
+  }
+
+  .commentaire {
+    width: 90%;
+  }
+}

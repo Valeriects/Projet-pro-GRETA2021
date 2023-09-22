@@ -1,0 +1,411 @@
+main {
+  width: 100%;
+  height: 100%;
+}
+/* section globale de l'avis */
+#avis {
+  display: grid;
+  grid-template-columns: 1% 49% 49% 1%;
+  grid-template-rows: 1fr 90% 1fr;
+  grid-template-areas:
+    ". . . ."
+    ". avis1 liste ."
+    ". . . .";
+}
+
+#avis1 {
+  grid-area: avis1;
+  display: grid;
+  /* grid-template-columns: 25% 50% 25%; */
+  gap: 0;
+  grid-auto-flow: row;
+  /* grid-template-areas:
+        ". aviseveil ."; */
+  /* height: 70vh;
+    width: 100%; */
+}
+
+.liste {
+  grid-area: liste;
+  overflow-y: auto;
+  background-color: var(--moinsBlanc);
+}
+
+.aviseveil {
+  grid-area: aviseveil;
+}
+
+/* section dans la sections #avis */
+#avisTomeEveil {
+  border: 1.5px solid var(--bleu);
+  border-radius: 0.3em;
+  box-shadow: 4px 5px 6px 0px #d0d0d0f0;
+  /* width: 94%;
+    height: 80%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding: 3vh; */
+}
+
+/* les deux première div dans  #avisTomeEveil */
+#pseudo,
+#msgavis {
+  display: flex;
+  /* flex-direction: row; */
+  /* width: 80%;
+    margin: 0vh 0 1vh 0; */
+}
+
+#envois {
+  /* width: 80%; */
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+}
+/* fin des 2 premières div de  #avisTomeEveil */
+
+/* le FONT des entrées et label */
+label,
+input,
+textarea {
+  font-size: 0.8em;
+  font-weight: 500;
+}
+
+/* les labels */
+/* label[for="pseudo"], label[for="Message"] {
+    margin: 1vh 0 2vh 0;
+    width: 20%;
+} */
+
+/* champ du message */
+[for="Message"] + textarea {
+  /* height: 30vh;
+    width: 100%;
+    margin: 0 0;
+    padding: 2vh; */
+  border: 0.5px solid var(--vert);
+  border-radius: 0.3em;
+  background-color: var(--moinsBlanc);
+}
+
+/* le bouton pour envoyer */
+input[type="submit"] {
+  /* margin: 2vh 0 0 0;
+    height: 5vh;
+    width: 18%;
+    padding: 0;
+    font-size: .9em; */
+  background-color: var(--vert);
+  color: var(--moinsBlanc);
+  font-weight: 600;
+  border: none;
+  border-radius: 0.4em;
+  box-shadow: 2px 2px 6px 0px #d1d1d1f0;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+/* input pseudo */
+#pseudo input[type="text"] {
+  /* width: 100%; */
+  border: 0.5px solid var(--vert);
+  border-radius: 0.3em;
+  background-color: var(--moinsBlanc);
+  /* height: 4vh;
+    padding-left: .8vw; */
+  overflow: scroll;
+}
+
+/* message erreur si les entrées ne sont pas bonnes */
+#erreur {
+  color: var(--champErreur);
+  font-weight: 600;
+  /* font-size: .8em; */
+  /* margin: 2vh; */
+}
+/* message de validation */
+#valide {
+  color: var(--vert);
+  font-weight: 600;
+  /* font-size: .8em;
+    margin: 2vh; */
+}
+
+/* message champs obligatoire */
+/* #obligatoire {
+    margin-left: -35vw;
+    font-size: .7em;
+} */
+
+/* DESKTOP */
+@media (min-width: 1600px) {
+  /* section globale de l'avis */
+  #avis1 {
+    grid-template-columns: 20% 60% 20%;
+    grid-template-areas: ". aviseveil .";
+    height: 70vh;
+    width: 100%;
+  }
+
+  /* section dans la sections #avis */
+  #avisTomeEveil {
+    width: 100%;
+    height: 80%;
+    padding: 3vh 6vh 0vh 3vh;
+  }
+
+  /* les deux première div dans  #avisTomeEveil */
+  #pseudo,
+  #msgavis {
+    width: 100%;
+    margin: 0vh 0 1vh 0;
+    flex-direction: row;
+  }
+
+  #envois {
+    width: 80%;
+    flex-direction: column;
+  }
+  /* fin des 2 premières div de  #avisTomeEveil */
+
+  /* les labels */
+  label[for="pseudot"] {
+    margin: 1vh 0 0 0;
+    width: 19.5%;
+    font-size: 1.2em;
+  }
+
+  label[for="Message"] {
+    margin: 1vh 0 0 0;
+    width: 20%;
+    font-size: 1.2em;
+  }
+
+  /* champ du message */
+  [for="Message"] + textarea {
+    height: 30vh;
+    width: 100%;
+    margin: 0 0;
+    padding: 2vh;
+  }
+
+  /* le bouton pour envoyer */
+  input[type="submit"] {
+    margin: 2vh 0 0 0;
+    height: 5vh;
+    width: 18%;
+    padding: 0;
+    font-size: 1.2em;
+  }
+
+  /* input pseudo */
+  #pseudo input[type="text"] {
+    width: 100%;
+    height: 4vh;
+    padding-left: 0.8vw;
+  }
+
+  /* taille de la police dans les imput champ et pseudo */
+  #pseudo input[type="text"],
+  [for="Message"] + textarea {
+    font-size: 1.1em;
+  }
+
+  /* message erreur si les entrées ne sont pas bonnes */
+  #erreur {
+    font-size: 0.8em;
+    margin: 2vh;
+  }
+  /* message de validation */
+  #valide {
+    font-size: 0.8em;
+    margin: 2vh;
+  }
+
+  /* message champs obligatoire */
+  #obligatoire {
+    margin-left: -50vw;
+    font-size: 1em;
+  }
+}
+
+/* format entre deux */
+@media (min-width: 768px) and (max-width: 1600px) {
+  /* section globale de l'avis */
+  #avis1 {
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 1fr 92% 5%;
+    grid-template-areas:
+      ". . ."
+      ". aviseveil ."
+      ". . .";
+    height: 70vh;
+    width: 100%;
+  }
+
+  /* section dans la sections #avis */
+  #avisTomeEveil {
+    width: 40vw;
+    height: 100%;
+    padding: 1vh;
+  }
+
+  /* les deux première div dans  #avisTomeEveil */
+  #pseudo,
+  #msgavis {
+    width: 90%;
+    margin: 0vh 0 1vh 0;
+    flex-direction: row;
+  }
+
+  #envois {
+    width: 80%;
+    flex-direction: column;
+  }
+  /* fin des 2 premières div de  #avisTomeEveil */
+
+  /* les labels */
+  label[for="pseudot"] {
+    margin: 1vh 0 0 0;
+    width: 19.5%;
+  }
+
+  label[for="Message"] {
+    margin: 1vh 0 0 0;
+    width: 20%;
+  }
+
+  /* champ du message */
+  [for="Message"] + textarea {
+    height: 30vh;
+    width: 90%;
+    margin: 0 0;
+    padding: 2vh;
+  }
+
+  /* le bouton pour envoyer */
+  input[type="submit"] {
+    margin: 2vh 0 0 0;
+    height: 5vh;
+    width: 18%;
+    padding: 0;
+    font-size: 0.9em;
+  }
+
+  /* input pseudo */
+  #pseudo input[type="text"] {
+    width: 90%;
+    height: 4vh;
+    padding-left: 0.8vw;
+  }
+
+  /* message erreur si les entrées ne sont pas bonnes */
+  #erreur {
+    font-size: 0.8em;
+    margin: 2vh;
+  }
+  /* message de validation */
+  #valide {
+    font-size: 0.8em;
+    margin: 2vh;
+  }
+
+  /* message champs obligatoire */
+  #obligatoire {
+    /* margin-left: -35vw; */
+    font-size: 0.8em;
+  }
+}
+
+/* format mobile */
+@media (max-width: 768px) {
+  /* section globale de l'avis */
+  #avis1 {
+    grid-template-columns: 4.5% 80% 5%;
+    grid-template-areas: ". aviseveil .";
+    height: 70vh;
+    width: 100%;
+    align-content: center;
+  }
+
+  /* section dans la sections #avis */
+  #avisTomeEveil {
+    width: 100%;
+    height: 80%;
+    padding: 3vh;
+  }
+
+  /* les deux première div dans  #avisTomeEveil */
+  #pseudo,
+  #msgavis {
+    width: 100%;
+    margin: 2vh 0 1vh 0;
+    flex-direction: column;
+  }
+
+  #envois {
+    width: 80%;
+    flex-direction: column;
+  }
+  /* fin des 2 premières div de  #avisTomeEveil */
+
+  /* les labels */
+
+  label[for="pseudot"],
+  label[for="Message"] {
+    margin: 3vh 0 1vh 0;
+    width: 50%;
+  }
+
+  /* label[for="Message"] {
+        margin-top: 1vh;
+        width: 50%;
+    } */
+
+  /* champ du message */
+  [for="Message"] + textarea {
+    height: 30vh;
+    width: 92.5%;
+    margin: 0 0;
+    padding: 2vh;
+  }
+
+  /* input pseudo */
+  #pseudo input[type="text"] {
+    width: 100%;
+    height: 4vh;
+    padding-left: 0.8vw;
+    margin: 2vh 0 0 0;
+  }
+
+  /* le bouton pour envoyer */
+  input[type="submit"] {
+    margin: 1vh 0 1vh 0;
+    height: 4vh;
+    width: 32%;
+    padding: 0;
+    font-size: 0.9em;
+  }
+
+  /* message erreur si les entrées ne sont pas bonnes */
+  #erreur {
+    font-size: 0.8em;
+    margin: 2vh;
+  }
+  /* message de validation */
+  #valide {
+    font-size: 0.8em;
+    margin: 2vh;
+  }
+
+  /* message champs obligatoire */
+  #obligatoire {
+    margin-left: -55vw;
+    margin-bottom: 2vh;
+    font-size: 0.7em;
+  }
+}

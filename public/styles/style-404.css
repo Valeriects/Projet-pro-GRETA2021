@@ -1,0 +1,112 @@
+body {
+  background-image: url(../ressources/fond_site/fondlivrpapier72dpi-opacité20-moyen.png);
+  background-size: cover;
+}
+
+/* le main */
+#wrap,
+.cadre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#wrap {
+  height: 100%;
+  align-items: center;
+}
+
+.cadre {
+  align-items: center;
+  border: 1.5px solid var(--bleu);
+  border-radius: 0.3em;
+  box-shadow: 4px 5px 6px 0px #d0d0d0f0;
+  background-color: var(--moinsBlanc);
+  padding: 2em;
+}
+
+/* le 404 */
+.num {
+  font-weight: bolder;
+  font-style: italic;
+  color: var(--bleu);
+}
+
+/* le page  non trouvé */
+h2 {
+  font-weight: bolder;
+  text-transform: capitalize;
+  color: var(--bleuSombre);
+}
+
+/* le vérifiez l'url */
+h3 {
+  font-weight: bold;
+  font-style: italic;
+  color: var(--themeSombre);
+}
+
+/* la div contenant le bouton et le lien retour */
+.retour {
+  margin-top: 2vh;
+}
+
+button {
+  padding: 0 1.5vw;
+}
+
+.num,
+h2,
+h3 {
+  margin: 1vh 0;
+}
+
+.lienRetour {
+  font-family: "Arimo", sans-serif;
+  font-weight: bolder;
+  text-transform: capitalize;
+  color: var(--bleuSombre);
+}
+
+.lienRetour:hover {
+  color: var(--bleu);
+}
+@media screen and (min-width: 768px) {
+  .cadre {
+    width: 40%;
+  }
+  .num {
+    font-size: 3.2em;
+  }
+  /* le page  non trouvé */
+  h2 {
+    font-size: 2.2em;
+  }
+
+  /* le vérifiez l'url */
+  h3 {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  .cadre {
+    width: 78%;
+  }
+
+  .num {
+    font-size: 3.2em;
+  }
+  /* le page  non trouvé */
+  h2 {
+    font-size: 1.7em;
+  }
+
+  /* le vérifiez l'url */
+  h3 {
+    font-size: 1em;
+  }
+  .retour button {
+    width: 17vw;
+  }
+}

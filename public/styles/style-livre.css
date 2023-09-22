@@ -1,0 +1,810 @@
+/* pour que le footer soit bien en bas lorsqu'il y a des éléments dans le body */
+.container-header,
+.container-footer {
+  /* position: static; */
+  position: sticky;
+}
+
+/* couleur fond onglet actif */
+.livres {
+  background-color: var(--bleuOnglet);
+}
+
+/*DEBUT  STYLE GENERAL QUE REPRENNE LES DEUX @MEDIA  : DONC LES PARTIES QUI CHANGENT SELON LES @MEDIAS NE SONT PLUS DANS LE GENERAL*/
+
+/* le <bande_header> est la <div id="liste"> dans le JS */
+#liste {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+/* les grands titres en h3 dans #un et #deux */
+.nomHistoire {
+  text-align: center;
+  margin: 0;
+}
+
+/* les listes dans chaque #un et #deux */
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+}
+
+/* les <li class=couv"> dans chaque <ul> dedans il y a une image de couverture et le titre du livre */
+.couv {
+  margin: 0;
+  height: 100%;
+  width: 20%;
+  margin: 0 3vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* image de la liste .couv */
+.couv img {
+  width: 100%;
+}
+
+/* titre du livre de la liste .couv */
+.couv p {
+  color: black;
+  text-align: center;
+}
+
+/* enlever les marges de tout les paragraphes */
+p {
+  margin: 0;
+}
+
+/* .couv:hover {
+    border: 1px solid var(--bleu);
+    border-radius: 5%;
+} */
+
+/* faire l'image au survole qui se grise où ici, qui se bleuètise */
+/* .couv img:hover {
+    background-color: var(--bleuOnglet);
+} */
+
+/* début GRID corps de page */
+
+/*  les sections pour chaque livre donc même style pour chaque  */
+.listeOeuvre {
+  display: grid;
+  /* grid-template-columns: 4% 35% 58% 4%; */
+  /* grid-template-rows: 100%; */
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  /* grid-template-areas:
+        ". carteLivre presentation ."; */
+  height: 100vh;
+}
+
+/* dans le .listeOeuvre, c'est la partie img grnd livre avec date parution et nbr pages */
+.carteLivre {
+  display: grid;
+  /* grid-template-columns: 30% 70%;
+    grid-template-rows: 8% 70% 5% 3% 10%; */
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  /* grid-template-areas:
+        ". ."
+        ". visuel"
+        ". dateParution"
+        ". nbrPage"; */
+  grid-area: carteLivre;
+  justify-items: center;
+}
+
+.visuel {
+  grid-area: visuel;
+}
+
+/* image grande livre */
+.visuel img {
+  width: 100%;
+}
+
+.dateParution {
+  grid-area: dateParution;
+}
+
+.dateParution p,
+.nbrPage p {
+  font-size: 0.8em;
+}
+
+.dateParution,
+.nbrPage {
+  display: flex;
+  align-items: center;
+}
+
+.nbrPage {
+  grid-area: nbrPage;
+}
+
+/* la partie avec toutes les autres informations du livre : .titre .caracteristique .restant .bouton .prix */
+.presentation {
+  display: grid;
+  /* grid-template-columns: 20% 20% 20% 40%;
+    grid-template-rows: 5% 7% 5% 30% 35% 10%; */
+  gap: 0px 0%;
+  grid-auto-flow: row;
+  /* grid-template-areas:
+        ". . . ."
+        "titre titre titre titre"
+        ". . . ."
+        "caracteristique caracteristique caracteristique caracteristique"
+        "restant restant restant restant"
+        "bouton bouton bouton bouton"; */
+  grid-area: presentation;
+}
+
+/* titre pour format mobile et non moblie */
+.unTitre h3,
+.unTitre h4,
+.mobile h3,
+.mobile h4 {
+  margin: 0 1vw;
+}
+
+.unTitre h4,
+.mobile h4 {
+  font-style: italic;
+  font-weight: lighter;
+}
+
+strong {
+  font-style: normal;
+}
+
+/* fin titre */
+
+/* contient les caractéristiques: dimensions, ISBN etc du livre */
+.caracteristique {
+  display: grid;
+  /* grid-template-columns: 20% 3% 60%; */
+  /* grid-template-rows: 1fr; */
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  /* grid-template-areas:
+        "imgsrcPetit . droite"; */
+  grid-area: caracteristique;
+}
+
+.imgsrcPetit {
+  grid-area: imgsrcPetit;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.imgsrcPetit img {
+  width: 100%;
+}
+
+.droite {
+  grid-area: droite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.droite div {
+  margin: 1vh 0;
+}
+
+.editeur,
+.dimensions,
+.isbn,
+.illus-couv,
+.details {
+  display: flex;
+  flex-direction: row;
+}
+
+/* logo editeur */
+.editeur img {
+  width: 7%;
+  margin-top: -2vh;
+}
+
+/* fin caractéristiques */
+
+/* contient le résumé du livre */
+.restant {
+  grid-area: restant;
+}
+
+.resum-titre {
+  font-style: italic;
+  font-weight: 700;
+}
+/* fin résumé livre */
+
+/* contient les différents boutons */
+/* pour le tome 1, les boutons sont un composant (<nocturneseveil> dans le vueJS */
+.bouton {
+  grid-area: bouton;
+}
+
+.caracteristique,
+.restant,
+.bouton {
+  padding-left: 5vh;
+}
+
+/* contient les tarifs */
+.prix {
+  font-size: 0.8em;
+}
+
+.prix div {
+  display: flex;
+  flex-direction: row;
+}
+
+.italic {
+  font-style: italic;
+  font-weight: 600;
+}
+/* fin des tarifs */
+
+/* bouton retour en haut */
+#btnRetour {
+  display: none;
+  height: 20%;
+  position: fixed;
+  bottom: 70px;
+  right: 7px;
+  z-index: 100;
+  box-shadow: none;
+  height: 4vh;
+  width: 10vw;
+}
+
+/* fin bouton retour en haut */
+
+/*FIN  STYLE GENERAL QUE REPRENNE LES DEUX @MEDIA */
+
+/* format tout autre que le mobile */
+@media screen and (min-width: 1600px) {
+  /* le <bande_header> est la <div id="liste"> dans le JS */
+  #liste {
+    flex-direction: row;
+  }
+
+  /* les deux div dans #liste, #un est celle de la trilogie et #deux est celle de Pélissanne */
+  #un,
+  #deux {
+    width: 50%;
+    height: 50%;
+  }
+
+  /* les grands titres en h3 dans #un et #deux */
+  .nomHistoire {
+    font-size: 2.5em;
+  }
+
+  /* les listes dans chaque #un et #deux */
+  ul {
+    justify-content: center;
+  }
+
+  /* titre du livre de la liste .couv */
+  .couv p {
+    width: 15vw;
+    font-size: 1.5em;
+  }
+
+  /*  les sections pour chaque livre donc même style pour chaque  */
+  .listeOeuvre {
+    grid-template-columns: 4% 35% 58% 4%;
+    grid-template-rows: 100%;
+    grid-template-areas: ". carteLivre presentation .";
+  }
+
+  /* dans le .listeOeuvre, c'est la partie img grnd livre avec date parution et nbr pages */
+  .carteLivre {
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 8% 70% 5% 3% 10%;
+    grid-template-areas:
+      ". ."
+      ". visuel"
+      ". dateParution"
+      ". nbrPage";
+  }
+
+  /* c'est le titre pour la version mobile */
+  .mobile {
+    display: none;
+  }
+
+  .visuel {
+    width: 80%;
+  }
+
+  /* augmenter la taille de la police pour date parution et nbr page */
+  .dateParution,
+  .nbrPage {
+    font-size: 1.6em;
+  }
+
+  /* la partie avec toutes les autres informations du livre : .titre .caracteristique .restant .bouton .prix */
+  .presentation {
+    grid-template-columns: 20% 20% 20% 40%;
+    grid-template-rows: 8% 5% 2% 30% 35% 10%;
+    grid-template-areas:
+      ". . . ."
+      "unTitre unTitre unTitre unTitre"
+      ". . . ."
+      "caracteristique caracteristique caracteristique caracteristique"
+      "restant restant restant restant"
+      "bouton bouton bouton bouton";
+  }
+
+  /* contient le grand titre et si il y a : les titres des tomes d'une saga */
+  .unTitre {
+    grid-area: unTitre;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .unTitre h3,
+  .unTitre h4 {
+    font-size: 3em;
+  }
+
+  /* contient les caractéristiques: dimensions, ISBN etc du livre */
+  .caracteristique {
+    grid-template-columns: 20% 3% 60%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "imgsrcPetit . droite";
+  }
+
+  .droite div {
+    margin: 1vh 0;
+  }
+
+  .editeur,
+  .dimensions,
+  .isbn,
+  .illus-couv,
+  .details {
+    margin-left: 2vh;
+    font-size: 1.3em;
+  }
+
+  /* logo editeur */
+  .editeur img {
+    width: 7%;
+    margin-top: -2vh;
+  }
+
+  /* fin caractéristiques */
+
+  /* contient le résumé du livre */
+  .restant {
+    padding-top: 5vh;
+    width: 77%;
+  }
+
+  .restant p {
+    font-size: 1.3em;
+  }
+
+  .resum-titre {
+    margin-bottom: 2vh;
+  }
+
+  /* fin résumé livre */
+
+  /* contient les différents boutons */
+  /* pour le tome 1, les boutons sont un composant (<nocturneseveil> dans le vueJS */
+  .bouton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.4em;
+  }
+
+  .mobileBouton {
+    display: none;
+  }
+
+  /* la taille de police dans les boutons, et un padding à gauche et à droite */
+  button {
+    font-size: 0.8em;
+    padding: 0 1.1vh;
+  }
+
+  .caracteristique,
+  .restant,
+  .bouton {
+    padding-left: 5vh;
+  }
+
+  /* contient les tarifs */
+  .prix {
+    font-size: 0.8em;
+    margin-left: -3.5vh;
+  }
+
+  .prix div {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .italic {
+    margin-right: 1vh;
+  }
+}
+
+/* format tout autre que le mobile et desktop */
+@media (min-width: 768px) and (max-width: 1600px) {
+  /* le <bande_header> est la <div id="liste"> dans le JS */
+  #liste {
+    flex-direction: row;
+  }
+
+  /* les deux div dans #liste, #un est celle de la trilogie et #deux est celle de Pélissanne */
+  #un,
+  #deux {
+    width: 50%;
+    height: 60%;
+  }
+
+  /* les grands titres en h3 dans #un et #deux */
+  .nomHistoire {
+    font-size: 1.5em;
+  }
+
+  /* les listes dans chaque #un et #deux */
+  ul {
+    justify-content: center;
+  }
+
+  /* titre du livre de la liste .couv */
+  .couv p {
+    width: 15vw;
+  }
+
+  /*  les sections pour chaque livre donc même style pour chaque  */
+  .listeOeuvre {
+    grid-template-columns: 4% 35% 58% 4%;
+    grid-template-rows: 100%;
+    grid-template-areas: ". carteLivre presentation .";
+  }
+
+  /* dans le .listeOeuvre, c'est la partie img grnd livre avec date parution et nbr pages */
+  .carteLivre {
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 8% 70% 5% 3% 10%;
+    grid-template-areas:
+      ". ."
+      ". visuel"
+      ". dateParution"
+      ". nbrPage";
+  }
+
+  /* c'est le titre pour la version mobile */
+  .mobile {
+    display: none;
+  }
+
+  .visuel {
+    width: 80%;
+  }
+
+  .nbrPage p {
+    padding-top: -2vh;
+  }
+
+  /* la partie avec toutes les autres informations du livre : .titre .caracteristique .restant .bouton .prix */
+  .presentation {
+    grid-template-columns: 20% 20% 20% 40%;
+    grid-template-rows: 8% 5% 2% 30% 35% 10%;
+    grid-template-areas:
+      ". . . ."
+      "unTitre unTitre unTitre unTitre"
+      ". . . ."
+      "caracteristique caracteristique caracteristique caracteristique"
+      "restant restant restant restant"
+      "bouton bouton bouton bouton";
+  }
+
+  /* contient le grand titre et si il y a : les titres des tomes d'une saga */
+  .unTitre {
+    grid-area: unTitre;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .unTitre h3,
+  .unTitre h4 {
+    font-size: 2.2em;
+  }
+
+  /* contient les caractéristiques: dimensions, ISBN etc du livre */
+  .caracteristique {
+    grid-template-columns: 20% 3% 60%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "imgsrcPetit . droite";
+  }
+
+  .droite div {
+    margin: 1vh 0;
+  }
+
+  .editeur,
+  .dimensions,
+  .isbn,
+  .illus-couv,
+  .details {
+    margin-left: 2vh;
+  }
+
+  /* logo editeur */
+  .editeur img {
+    width: 7%;
+    margin-top: -2vh;
+  }
+
+  /* fin caractéristiques */
+
+  /* contient le résumé du livre */
+  .restant {
+    padding-top: 5vh;
+    width: 77%;
+  }
+
+  .resum-titre {
+    margin-bottom: 2vh;
+  }
+  /* fin résumé livre */
+
+  /* contient les différents boutons */
+  /* pour le tome 1, les boutons sont un composant (<nocturneseveil> dans le vueJS */
+  .bouton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .mobileBouton {
+    display: none;
+  }
+
+  .caracteristique,
+  .restant,
+  .bouton {
+    padding-left: 5vh;
+  }
+
+  /* contient les tarifs */
+  .prix {
+    font-size: 0.8em;
+    margin-left: -3.5vh;
+  }
+
+  .prix div {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .italic {
+    margin-right: 1vh;
+  }
+}
+
+/* format mobile */
+@media (max-width: 768px) {
+  /* le <bande_header> est la <div id="liste"> dans le JS */
+  #liste {
+    flex-direction: column;
+  }
+
+  /* les deux div dans #liste, #un est celle de la trilogie et #deux est celle de Pélissanne */
+  #un,
+  #deux {
+    width: 90%;
+    height: 40%;
+  }
+
+  /* les grands titres en h3 dans #un et #deux */
+  .nomHistoire {
+    font-size: 1.5em;
+  }
+
+  /* les listes dans chaque #un et #deux */
+  ul {
+    justify-content: space-around;
+  }
+
+  /* titre du livre de la liste .couv */
+  .couv p {
+    width: 15vw;
+    font-size: 0.9em;
+  }
+
+  /*  les sections pour chaque livre donc même style pour chaque  */
+  .listeOeuvre {
+    grid-template-columns: 1fr 98% 1fr;
+    grid-template-rows: 1fr 34em 1% 36em;
+    grid-template-areas:
+      ". . ."
+      ". carteLivre ."
+      ". . ."
+      ". presentation .";
+    height: 72em;
+  }
+
+  /* dans le .listeOeuvre, c'est la partie img grnd livre avec date parution et nbr pages */
+  .carteLivre {
+    grid-template-columns: 1fr;
+    grid-template-rows: 9.5% 28em 3% 3% 3%;
+    grid-template-areas:
+      "mobile"
+      "visuel"
+      "."
+      "dateParution"
+      "nbrPage";
+    /* height: 100vh; */
+  }
+
+  .mobile {
+    grid-area: mobile;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 99;
+  }
+
+  .mobile h3,
+  .mobile h4 {
+    font-size: 1.4em;
+  }
+
+  .visuel {
+    width: 80%;
+  }
+
+  .dateParution {
+    font-size: 1.1em;
+  }
+
+  .nbrPage p {
+    padding-top: -3vh;
+  }
+
+  /* la partie avec toutes les autres informations du livre : .titre .caracteristique .restant .bouton .prix */
+  .presentation {
+    grid-template-columns: 98%;
+    grid-template-rows: 5% 20% 35% 10% 10%;
+    grid-template-areas:
+      "."
+      "caracteristique"
+      "restant"
+      "."
+      "mobileBouton";
+    justify-content: center;
+    /* display: none; */
+  }
+
+  /* le .titre est pour le format autre que mobile */
+  .unTitre {
+    display: none;
+  }
+
+  /* contient les caractéristiques: dimensions, ISBN etc du livre */
+  .caracteristique {
+    grid-template-columns: 25% 3% 72%;
+    grid-template-rows: 100%;
+    grid-template-areas: "imgsrcPetit . droite";
+  }
+
+  .droite div {
+    margin: 0.5vh 0;
+  }
+
+  .droite div p {
+    font-size: 0.85em;
+  }
+
+  /* .editeur, .dimensions, .isbn, .illus-couv, .details {
+        margin-left: 2vh;
+    } */
+
+  /* logo editeur */
+  .editeur img {
+    width: 15%;
+    margin-top: -2vh;
+  }
+
+  /* fin caractéristiques */
+
+  /* contient le résumé du livre */
+  .restant {
+    padding-top: 5vh;
+    width: 85%;
+    margin-right: 2vw;
+  }
+
+  .resum-titre {
+    margin-bottom: 2vh;
+  }
+  /* fin résumé livre */
+
+  /* contient les différents boutons */
+
+  /* pour le tome 1, les boutons sont un composant (<nocturneseveil> dans le vueJS */
+  .mobileBouton {
+    display: grid;
+    grid-template-columns: 2% 1fr 1fr 1fr 2%;
+    grid-template-rows: 50% 50%;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . . prix ."
+      ". mobBtn1 mobBtn1 mobBtn1 .";
+    /* grid-area: bouton;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly; */
+    /* height: 20vh;
+        padding-left: 0;         */
+    /* justify-items: space-between; */
+  }
+
+  .bouton {
+    display: none;
+  }
+
+  .mobBtn1 {
+    grid-area: mobBtn1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 29.5em;
+  }
+
+  /* la taille de police dans les boutons, et un padding à gauche et à droite */
+  button {
+    font-size: 0.8em;
+    padding: 1vw;
+    height: 5vh;
+    margin: 0 0.5vw;
+  }
+
+  /* .caracteristique, .restant, .bouton {
+        padding-left: 5vh;
+    } */
+
+  /* contient les tarifs */
+  .prix {
+    grid-area: prix;
+    font-size: 0.7em;
+    /* margin-left: -3.5vh; */
+    width: 100%;
+    margin-top: 39em;
+  }
+
+  /* aligner les tarifs et les phrases */
+  .prix div {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+  }
+
+  .italic {
+    margin-right: 0.5vh;
+  }
+}

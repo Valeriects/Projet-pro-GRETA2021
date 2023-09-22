@@ -1,0 +1,295 @@
+/* couleur onglet active */
+.bio {
+  background-color: var(--bleuOnglet);
+}
+
+/* pour sélectionner une miniature */
+[class^="miniat"] {
+  cursor: pointer;
+  opacity: 1;
+  /* border-radius: 5%; */
+}
+
+[class^="miniat"]:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+/* Fin de sélection d'une miniature */
+
+@media screen and (min-width: 1600px) {
+  /* changer la taille police, et remettre tous les grids  */
+  /*le main : grid corps de page */
+  .container_bio {
+    width: 100%;
+    height: 75vh;
+    display: grid;
+    grid-template-columns: 1fr 30% 2% 30% 20% 1fr;
+    grid-template-rows: 1fr 10% 30% 45% 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . . . . ."
+      ". photoBio . . . ."
+      ". photoBio . bioText bioText ."
+      ". photoBio . rubanPhoto rubanPhoto ."
+      ". . . . . .";
+  }
+
+  /* la div de l'image en grand */
+  .photoBio {
+    display: grid;
+    grid-template-columns: 1fr 90%;
+    grid-template-rows: 1fr 80% 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". ."
+      ". photoBiographie"
+      ". .";
+    grid-area: photoBio;
+  }
+
+  /* image dans la div photoBio */
+  .photoBiographie {
+    grid-area: photoBiographie;
+    width: 80%;
+    /* padding-top: 2.5vh; */
+    justify-items: center;
+  }
+
+  /* biographie */
+  .bioText {
+    grid-area: bioText;
+    width: 80%;
+  }
+
+  /* le titre de la biographie */
+  .moi {
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 4.5vh;
+    font-size: 2em;
+  }
+
+  /* la biograpghie en elle-même */
+  .texte {
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
+
+  /* la div qui contient les autres photos */
+  .rubanPhoto {
+    display: grid;
+    grid-template-columns: 15% 1fr 15% 1fr 15% 1fr 15% 1fr 15%;
+    grid-template-rows: 25%;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . . . . . . . ."
+      "miniature . miniature1 . miniature2 . miniature3 . miniature4"
+      ". . . . . . . . .";
+    grid-area: rubanPhoto;
+  }
+
+  .miniature {
+    grid-area: miniature;
+  }
+  .miniature1 {
+    grid-area: miniature1;
+  }
+  .miniature2 {
+    grid-area: miniature2;
+  }
+  .miniature3 {
+    grid-area: miniature3;
+  }
+  /* .miniature4 { grid-area: miniature4; } */
+
+  /* ceux dont la classe contient "miniat" donc les miniatures */
+  [class^="miniat"] {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1600px) {
+  /*le main : grid corps de page */
+  .container_bio {
+    width: 100%;
+    height: 75vh;
+    display: grid;
+    grid-template-columns: 1fr 30% 2% 30% 20% 1fr;
+    grid-template-rows: 1fr 10% 39% 45% 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . . . . ."
+      ". photoBio . . . ."
+      ". photoBio . bioText bioText ."
+      ". photoBio . rubanPhoto rubanPhoto ."
+      ". . . . . .";
+  }
+
+  /* la div de l'image en grand */
+  .photoBio {
+    display: grid;
+    grid-template-columns: 1fr 90%;
+    grid-template-rows: 1fr 80% 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". ."
+      ". photoBiographie"
+      ". .";
+    grid-area: photoBio;
+  }
+
+  /* image dans la div photoBio */
+  .photoBiographie {
+    grid-area: photoBiographie;
+    width: 80%;
+    /* padding-top: 2.5vh; */
+    justify-items: center;
+  }
+
+  /* biographie */
+  .bioText {
+    grid-area: bioText;
+    width: 80%;
+  }
+
+  /* le titre de la biographie */
+  .moi {
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 3vh;
+    font-size: 1.3em;
+  }
+
+  /* la bio en elle-même */
+  .texte {
+    line-height: 1.5em;
+  }
+
+  /* la div qui contient les autres photos */
+  .rubanPhoto {
+    display: grid;
+    grid-template-columns: 15% 1fr 15% 1fr 15% 1fr 15% 1fr 15%;
+    grid-template-rows: 25%;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . . . . . . . ."
+      "miniature . miniature1 . miniature2 . miniature3 . miniature4"
+      ". . . . . . . . .";
+    grid-area: rubanPhoto;
+  }
+
+  .miniature {
+    grid-area: miniature;
+  }
+  .miniature1 {
+    grid-area: miniature1;
+  }
+  .miniature2 {
+    grid-area: miniature2;
+  }
+  .miniature3 {
+    grid-area: miniature3;
+  }
+  /* .miniature4 { grid-area: miniature4; } */
+
+  /* ceux dont la classe contient "miniat" donc les miniatures */
+  [class^="miniat"] {
+    width: 100%;
+  }
+}
+
+/* format mobile */
+@media (max-width: 768px) {
+  /* pour que le footer soit bien en bas lorsqu'il y a des éléments dans le body */
+  /* .container-header, .container-footer {
+      position: static;
+    } */
+
+  .container_bio {
+    /* display: flex;
+      flex-direction: column;
+      align-items: center; */
+    /* width: 100%;
+      height: 80vh; */
+    display: grid;
+    grid-template-columns: 1fr 50% 1% 30% 1fr;
+    grid-template-rows: 5% 52% 1fr 32% 5%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . . . ."
+      ". photoBio . rubanPhoto ."
+      ". . . . ."
+      ". bioText bioText bioText ."
+      ". . . . .";
+    justify-items: center;
+  }
+
+  .photoBio {
+    grid-area: photoBio;
+    width: 90%;
+    /* justify-content: center; */
+  }
+
+  /* l'image de la div photoBio */
+  .photoBiographie {
+    width: 100%;
+  }
+
+  .bioText {
+    grid-area: bioText;
+  }
+
+  /* titre du block de texte */
+  .moi {
+    font-size: 0.95em;
+    font-weight: 600;
+    font-style: italic;
+    margin: 0 0 2.5vh 0;
+  }
+  /* block texte */
+  .texte {
+    font-size: 0.8em;
+    margin: 0 0 2vh 0;
+  }
+
+  /* la div qui contient les autres photos */
+  .rubanPhoto {
+    display: grid;
+    grid-template-columns: 1fr 90% 1fr;
+    grid-template-rows: 18% 1fr 18% 1fr 18% 1fr 18%;
+    gap: 7.5px 0px;
+    grid-template-areas:
+      ". miniature ."
+      ". . ."
+      ". miniature1 ."
+      ". . ."
+      ". miniature2 ."
+      ". . ."
+      ". miniature3 .";
+    grid-area: rubanPhoto;
+    justify-items: center;
+  }
+
+  .miniature {
+    grid-area: miniature;
+  }
+  .miniature1 {
+    grid-area: miniature1;
+  }
+  .miniature2 {
+    grid-area: miniature2;
+  }
+  .miniature3 {
+    grid-area: miniature3;
+  }
+
+  /* ceux dont la classe contient "miniat" donc les miniatures */
+  [class^="miniat"] {
+    width: 40%;
+  }
+}

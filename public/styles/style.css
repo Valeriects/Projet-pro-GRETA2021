@@ -1,0 +1,944 @@
+/* police de caractère du footer et du nom de l'auteur bandeau header */
+@font-face {
+  font-family: "KaushanScript";
+  src: url("../ressources/fonts/KaushanScript-Regular.otf");
+}
+
+/* police de caractère du corps de la page */
+@font-face {
+  font-family: "Arimo", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+}
+
+/* police de caractère des onglets et du menu pour les mobiles */
+@font-face {
+  font-family: "Averia Sans Libre", cursive;
+  src: url("https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+
+:root {
+  --white: white;
+  --bleu: #3cb6f5;
+  --bleuOnglet: #3cb7f575;
+  --themeSombre: #2e3144;
+  --contactObscure: #f8f9fa;
+  --bleuSombre: #1d5894;
+  --gris: #acacac;
+  --moinsBlanc: #f8f9fa;
+  --vert: #020e47;
+  /* --vert: #d5f2a2; */
+  --onglet: rgba(255, 255, 255, 0.309);
+  --champErreur: rgb(255, 0, 0);
+}
+
+/* couleur blanche pour liens et suppression du trait de surlignage */
+a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+/* police kaushanScript sur le titre et les liens du footer */
+.container-header .titre,
+.container-footer a {
+  font-family: "KaushanScript";
+}
+
+/* police general sur les differentes pages */
+p,
+button,
+h1,
+h2,
+h3,
+h4,
+time,
+label,
+::placeholder,
+textarea,
+option {
+  font-family: "Arimo", sans-serif;
+}
+
+/* caractéristiques de tout les boutons */
+button {
+  margin: 0 5vh 0 0;
+  height: 5vh;
+  background-color: var(--vert);
+  /* color: var(--bleu); */
+  color: var(--moinsBlanc);
+  font-weight: 600;
+  border: none;
+  border-radius: 0.4em;
+  box-shadow: 2px 2px 6px 0px #d1d1d1f0;
+  cursor: pointer;
+  border: 0.5px solid var(--vert);
+  transition: 0.3s;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  /* background-color: var(--bleu); */
+  background-color: var(--moinsBlanc);
+  color: var(--vert);
+  border: 0.5px solid var(--vert);
+  font-weight: 700;
+}
+
+/* menu burger mode non mobile */
+.menuPopup {
+  display: none;
+}
+
+/* grid header */
+.container-header {
+  display: grid;
+  grid-template-columns: 5% 30% 5% 1fr 11% 7% 15% 8% 5%;
+  grid-template-rows: 70% 30%;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". titre img-croquis . . . . . icone"
+    ". titre img-croquis . bio livres presse agenda icone";
+  background-image: url(../ressources/fond_site/bannière-header05.png);
+  background-repeat: repeat-x;
+  /* background-repeat: no-repeat; */
+  width: 100%;
+  height: 16.5vh;
+}
+
+.titre {
+  grid-area: titre;
+  margin-top: 1.5vh;
+}
+
+.img-croquis {
+  grid-area: img-croquis;
+}
+
+/* debut onglets */
+/* survol liens */
+.bio:hover,
+.livres:hover,
+.presse:hover,
+.agenda:hover {
+  background-color: var(--bleuOnglet);
+}
+
+.bio,
+.livres,
+.presse,
+.agenda {
+  /* font-size: 1.2em; */
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Averia Sans Libre", cursive;
+  padding-top: 0.4vh;
+  background-color: var(--onglet);
+  border: 1px var(--themeSombre) solid;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+}
+
+.bio {
+  grid-area: bio;
+}
+
+.livres {
+  grid-area: livres;
+}
+
+.presse {
+  grid-area: presse;
+}
+
+.agenda {
+  grid-area: agenda;
+}
+
+.icone {
+  grid-area: icone;
+  display: none;
+}
+/* fin onglets */
+/* fin grid header */
+
+/* survole des liens */
+.titre a:hover,
+.contact a:hover,
+.cgu a:hover,
+.mentions a:hover,
+.cookie a:hover {
+  color: var(--bleu);
+}
+
+/* grid footer */
+.container-footer {
+  background-image: url(../ressources/fond_site/bannière-footerDesktop06.png);
+  background-repeat: repeat-x;
+  /* background-repeat: no-repeat; */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* height: 100%; */
+}
+
+.contact,
+.cgu,
+.mentions,
+.cookie,
+.tiret1,
+.tiret2 {
+  text-align: center;
+  color: var(--white);
+  font-family: "Averia Sans Libre", cursive;
+}
+
+.tiret1,
+.tiret2 {
+  display: none;
+}
+
+.contact {
+  grid-area: contact;
+}
+
+.tiret1 {
+  grid-area: tiret1;
+}
+
+.cgu {
+  grid-area: cgu;
+}
+
+.mentions {
+  grid-area: mentions;
+}
+
+.tiret2 {
+  grid-area: tiret2;
+}
+
+.cookie {
+  grid-area: cookie;
+}
+
+.img {
+  grid-area: img;
+}
+
+/* fin grid footer */
+
+@media screen and (min-width: 1600px) {
+  /* header*/
+  .titre {
+    font-size: 5em;
+    padding-top: 3vh;
+  }
+
+  .croquis {
+    width: 17vh;
+  }
+
+  .bio,
+  .livres,
+  .presse,
+  .agenda,
+  .onglet {
+    font-size: 1.8em;
+    padding-top: 0.8vh;
+    border-top-left-radius: 0.8em;
+    border-top-right-radius: 0.8em;
+  }
+
+  /* fin header */
+
+  /* grid footer */
+  .container-footer {
+    display: grid;
+    grid-template-columns: 1fr 7% 0% 4% 9% 0% 11% 5% 7% 1fr;
+    grid-template-rows: 100%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: ". contact tiret1 cgu mentions tiret2 cookie . img .";
+  }
+
+  .contact,
+  .cgu,
+  .mentions,
+  .cookie {
+    padding-top: 2vh;
+    font-size: 1.5em;
+  }
+
+  .logo {
+    width: 14vh;
+    text-align: center;
+    padding-top: 0.8vh;
+  }
+  /* fin grid footer */
+}
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+  /* header*/
+  .titre {
+    font-size: 3.2em;
+    padding-top: 3.6vh;
+  }
+
+  .croquis {
+    width: 16.5vh;
+  }
+
+  .bio,
+  .livres,
+  .presse,
+  .agenda,
+  .onglet {
+    font-size: 1.2em;
+    padding-top: 0.9vh;
+  }
+
+  /* fin header */
+
+  /* grid footer */
+  .container-footer {
+    display: grid;
+    grid-template-columns: 1fr 7% 0% 4% 9% 0% 11% 5% 7% 1fr;
+    grid-template-rows: 100%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: ". contact tiret1 cgu mentions tiret2 cookie . img .";
+  }
+
+  .contact,
+  .cgu,
+  .mentions,
+  .cookie {
+    padding-top: 2vh;
+    font-size: 1.05em;
+  }
+
+  .logo {
+    width: 14vh;
+    text-align: center;
+    padding-top: 0.8vh;
+  }
+  /* fin grid footer */
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  /* header */
+  .container-header {
+    /* display: grid;
+        grid-template-columns: 5% 37% 6% 1fr 11% 7% 15% 8% 5%;
+        grid-template-rows: 70% 30%;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          ". titre img-croquis . . . . . icone"
+          ". titre img-croquis . bio livres presse agenda icone";
+        background-image: url(../ressources/fond_site/bannière_header05.png);
+        background-repeat: repeat-x;
+        width: 100%; */
+    height: 14vh;
+  }
+
+  .titre {
+    font-size: 2.7em;
+    padding-top: 2.4vh;
+  }
+
+  .croquis {
+    width: 14vh;
+  }
+
+  .bio,
+  .livres,
+  .presse,
+  .agenda,
+  .onglet {
+    font-size: 1em;
+  }
+
+  /* fin header*/
+
+  /* footer */
+  .container-footer {
+    display: grid;
+    grid-template-columns: 1fr 11% 0% 6% 14% 0% 17% 3% 10% 1fr;
+    grid-template-rows: 100%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: ". contact tiret1 cgu mentions tiret2 cookie . img .";
+  }
+
+  .contact,
+  .cgu,
+  .mentions,
+  .cookie {
+    padding-top: 2vh;
+  }
+
+  .logo {
+    width: 13vh;
+    text-align: center;
+    padding-top: 1vh;
+  }
+  /* footer */
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  /* header */
+  .container-header {
+    /* display: grid;
+        grid-template-columns: 5% 37% 6% 1fr 11% 7% 15% 8% 5%;
+        grid-template-rows: 70% 30%;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          ". titre img-croquis . . . . . icone"
+          ". titre img-croquis . bio livres presse agenda icone";
+        background-image: url(../ressources/fond_site/bannière_header05.png);
+        background-repeat: repeat-x;
+        width: 100%; */
+    height: 13vh;
+  }
+
+  .titre {
+    font-size: 2.5em;
+    padding-top: 3vh;
+  }
+
+  .croquis {
+    width: 13vh;
+  }
+
+  .bio,
+  .livres,
+  .presse,
+  .agenda,
+  .onglet {
+    font-size: 0.8em;
+  }
+
+  /* footer */
+  .container-footer {
+    display: grid;
+    grid-template-columns: 1fr 11% 0% 6% 14% 0% 17% 3% 10% 1fr;
+    grid-template-rows: 100%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: ". contact tiret1 cgu mentions tiret2 cookie . img .";
+  }
+
+  .contact,
+  .cgu,
+  .mentions,
+  .cookie {
+    padding-top: 2vh;
+  }
+
+  .logo {
+    width: 14vh;
+    text-align: center;
+    padding-top: 1vh;
+  }
+  /* footer */
+}
+
+@media (min-width: 420px) and (max-width: 768px) {
+  /* header  */
+
+  .container-header {
+    display: grid;
+    grid-template-columns: 5% 55% 9% 1fr 0% 0% 0% 0% 15%;
+    grid-template-rows: 70% 0%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". titre img-croquis . . . . . icone"
+      ". titre img-croquis . bio livres presse agenda icone";
+    background-image: url(../ressources/fond_site/bannière-header05.png);
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 12vh;
+  }
+
+  .titre {
+    font-size: 2em;
+    padding-top: 2.5vh;
+  }
+
+  .croquis {
+    width: 10vh;
+  }
+
+  .bio,
+  .livres,
+  .presse,
+  .agenda,
+  .onglet {
+    display: none;
+  }
+
+  .icone {
+    display: block;
+    margin-top: 2.8vh;
+    z-index: 999;
+  }
+
+  .burger {
+    width: 70%;
+    z-index: 999;
+  }
+
+  /* menu pop up */
+  .menuPopup {
+    background-image: url(../ressources/fond_site/bannière-menu09.png);
+    background-repeat: repeat-x;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 11.9vh;
+    width: 50%;
+    line-height: 7vh;
+    border-radius: 0 0 1em 1em;
+    padding-bottom: 2vw;
+    z-index: 999;
+  }
+
+  .menuPopup a {
+    padding: 0 2vw 0 2vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Averia Sans Libre", cursive;
+    z-index: 999;
+  }
+
+  .menuPopup a:hover {
+    color: var(--bleu);
+    z-index: 999;
+  }
+
+  .fas,
+  .far,
+  .menuPopup {
+    font-size: 1.35em;
+    z-index: 999;
+  }
+
+  .iconPerso {
+    width: 60%;
+    z-index: 999;
+  }
+
+  .hidden {
+    display: none;
+  }
+  /* fin menu pop up */
+  /* fin header  */
+
+  /* footer */
+  .container-footer {
+    display: grid;
+    grid-template-columns: 1fr 27% 4% 29% 0% 25% 1fr;
+    grid-template-rows: 20% 20%;
+    gap: 8px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". contact tiret1 cgu . img ."
+      ". mentions tiret2 cookie . img .";
+    background-image: url(../ressources/fond_site/bannière-footerDesktop06.png);
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 10vh;
+  }
+
+  .tiret1,
+  .tiret2,
+  .cgu,
+  .contact,
+  .mentions,
+  .cookie {
+    font-size: 1em;
+    padding-top: 1.5vh;
+  }
+
+  .tiret1,
+  .tiret2 {
+    display: block;
+    margin-left: 0.6vw;
+    margin-top: 0.5vh;
+  }
+
+  .tiret1 {
+    grid-area: tiret1;
+  }
+
+  .cgu {
+    grid-area: cgu;
+    text-align: left;
+  }
+
+  .contact {
+    grid-area: contact;
+    text-align: right;
+  }
+
+  .mentions {
+    grid-area: mentions;
+    text-align: right;
+  }
+
+  .cookie {
+    grid-area: cookie;
+    text-align: left;
+  }
+
+  .img {
+    grid-area: img;
+  }
+
+  .logo {
+    padding-top: 2.5vh;
+    padding-left: 3.5vw;
+    width: 12.5vh;
+  }
+  /* fin footer */
+}
+
+@media (min-width: 320px) and (max-width: 420px) {
+  /* header  */
+
+  .container-header {
+    display: grid;
+    grid-template-columns: 5% 55% 9% 1fr 0% 0% 0% 0% 15%;
+    grid-template-rows: 70% 0%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". titre img-croquis . . . . . icone"
+      ". titre img-croquis . bio livres presse agenda icone";
+    background-image: url(../ressources/fond_site/bannière-header05.png);
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 12vh;
+  }
+
+  .titre {
+    font-size: 1.6em;
+    padding-top: 2.5vh;
+  }
+
+  .croquis {
+    width: 9vh;
+  }
+
+  .bio,
+  .livres,
+  .presse,
+  .agenda,
+  .onglet {
+    display: none;
+  }
+
+  .icone {
+    display: block;
+    margin-top: 2.8vh;
+    z-index: 999;
+  }
+
+  .burger {
+    width: 60%;
+    z-index: 999;
+  }
+
+  /* menu pop up */
+  .menuPopup {
+    background-image: url(../ressources/fond_site/bannière-menu09.png);
+    background-repeat: repeat-x;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 11.9vh;
+    width: 50%;
+    line-height: 7vh;
+    border-radius: 0 0 1em 1em;
+    padding-bottom: 2vw;
+    z-index: 999;
+  }
+
+  .menuPopup a {
+    padding: 0 2vw 0 2vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Averia Sans Libre", cursive;
+    z-index: 999;
+  }
+
+  .menuPopup a:hover {
+    color: var(--bleu);
+    z-index: 999;
+  }
+
+  .fas,
+  .far,
+  .menuPopup {
+    font-size: 1em;
+    z-index: 999;
+  }
+
+  .iconPerso {
+    width: 60%;
+    z-index: 999;
+  }
+
+  .hidden {
+    display: none;
+  }
+  /* fin menu pop up */
+  /* fin header */
+
+  /* footer  */
+  .container-footer {
+    display: grid;
+    grid-template-columns: 1fr 27% 4% 29% 0% 25% 1fr;
+    grid-template-rows: 20% 20%;
+    gap: 8px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". contact tiret1 cgu . img ."
+      ". mentions tiret2 cookie . img .";
+    background-image: url(../ressources/fond_site/bannière-footerDesktop06.png);
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 10vh;
+  }
+
+  .tiret1,
+  .tiret2,
+  .cgu,
+  .contact,
+  .mentions,
+  .cookie {
+    font-size: 0.8em;
+    padding-top: 1.5vh;
+  }
+
+  .tiret1,
+  .tiret2 {
+    display: block;
+    margin-left: 0.6vw;
+    margin-top: 0.5vh;
+  }
+
+  .tiret1 {
+    grid-area: tiret1;
+  }
+
+  .cgu {
+    grid-area: cgu;
+    text-align: left;
+  }
+
+  .contact {
+    grid-area: contact;
+    text-align: right;
+  }
+
+  .mentions {
+    grid-area: mentions;
+    text-align: right;
+  }
+
+  .cookie {
+    grid-area: cookie;
+    text-align: left;
+  }
+
+  .img {
+    grid-area: img;
+  }
+
+  .logo {
+    padding-top: 2.5vh;
+    padding-left: 3.5vw;
+    width: 12.5vh;
+  }
+  /* fin footer */
+}
+
+@media (max-width: 320px) {
+  /* header  */
+
+  .container-header {
+    display: grid;
+    grid-template-columns: 5% 55% 9% 1fr 0% 0% 0% 0% 15%;
+    grid-template-rows: 70% 0%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". titre img-croquis . . . . . icone"
+      ". titre img-croquis . bio livres presse agenda icone";
+    background-image: url(../ressources/fond_site/bannière-header05.png);
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 12vh;
+  }
+
+  .titre {
+    font-size: 1.2em;
+    padding-top: 3.5vh;
+  }
+
+  .croquis {
+    width: 9vh;
+  }
+
+  .bio,
+  .livres,
+  .presse,
+  .agenda,
+  .onglet {
+    display: none;
+  }
+
+  .icone {
+    display: block;
+    margin-top: 2.8vh;
+    z-index: 999;
+  }
+
+  .burger {
+    width: 60%;
+    z-index: 999;
+  }
+
+  /* menu pop up */
+  .menuPopup {
+    background-image: url(../ressources/fond_site/bannière-menu09.png);
+    background-repeat: repeat-x;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 11.9vh;
+    width: 50%;
+    line-height: 7vh;
+    border-radius: 0 0 1em 1em;
+    padding-bottom: 2vw;
+    z-index: 999;
+  }
+
+  .menuPopup a {
+    padding: 0 2vw 0 2vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Averia Sans Libre", cursive;
+    z-index: 999;
+  }
+
+  .menuPopup a:hover {
+    color: var(--bleu);
+    z-index: 999;
+  }
+
+  .fas,
+  .far,
+  .menuPopup {
+    font-size: 1em;
+    z-index: 999;
+  }
+
+  .iconPerso {
+    width: 60%;
+    z-index: 999;
+  }
+
+  .hidden {
+    display: none;
+  }
+  /* fin menu pop up */
+  /* fin header */
+
+  /* footer  */
+  .container-footer {
+    display: grid;
+    grid-template-columns: 1fr 27% 4% 29% 0% 25% 1fr;
+    grid-template-rows: 20% 20%;
+    gap: 8px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". contact tiret1 cgu . img ."
+      ". mentions tiret2 cookie . img .";
+    background-image: url(../ressources/fond_site/bannière-footerDesktop06.png);
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 10vh;
+  }
+
+  .tiret1,
+  .tiret2,
+  .cgu,
+  .contact,
+  .mentions,
+  .cookie {
+    font-size: 0.7em;
+    padding-top: 1.5vh;
+  }
+
+  .tiret1,
+  .tiret2 {
+    display: block;
+    margin-left: 0.6vw;
+    margin-top: 0.5vh;
+  }
+
+  .tiret1 {
+    grid-area: tiret1;
+  }
+
+  .cgu {
+    grid-area: cgu;
+    text-align: left;
+  }
+
+  .contact {
+    grid-area: contact;
+    text-align: right;
+  }
+
+  .mentions {
+    grid-area: mentions;
+    text-align: right;
+  }
+
+  .cookie {
+    grid-area: cookie;
+    text-align: left;
+  }
+
+  .img {
+    grid-area: img;
+  }
+
+  .logo {
+    padding-top: 2.5vh;
+    padding-left: 3.5vw;
+    width: 12.5vh;
+  }
+  /* fin footer */
+}

@@ -1,0 +1,558 @@
+/* le main */
+#log {
+  width: 100%;
+}
+
+/* la div dans le main */
+#position {
+  /* overflow: none; */
+  width: 100%;
+  /* height: 100%; */
+}
+
+#dedans {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  /* grid-template-columns: 5% 32% 8% 50% 5%;
+  grid-template-rows: 18% 52.5% 10%; */
+  /* gap: 3% 0; */
+  grid-template-areas:
+    ". bord . affichage ."
+    ". avis . affichage ."
+    ". avis . deconn .";
+}
+
+/* le bouton deconnexion: */
+.deconn {
+  grid-area: deconn;
+  display: flex;
+  align-items: center;
+}
+
+/* div contenant les $_SESSION['ok'] et $_SESSION['infologin'] */
+.bord {
+  grid-area: bord;
+}
+
+.avis {
+  grid-area: avis;
+}
+
+.affichage {
+  grid-area: affichage;
+}
+
+/* la div qui contient le $_SESSION['affiche'] */
+#afficheAvis {
+  /* border: 1.5px solid var(--bleuSombre);
+  border-radius: 0.3em; */
+  /* box-shadow: 4px 5px 6px 0px #d0d0d0f0; */
+  border: 1.5px solid var(--bleuOnglet);
+  border-radius: 0.3em;
+  box-shadow: 4px 5px 6px 0px #d0d0d0f0;
+  background-color: var(--moinsBlanc);
+
+  height: 50vh;
+  width: 100%;
+  /* background-color: var(--moinsBlanc); */
+  display: flex;
+  flex-direction: column;
+  /* si je mets justify-content: center; je n'afficherais pas le haut de mes avis */
+  /* justify-content: center; */
+  align-content: center;
+  padding: 2vw;
+  overflow-y: auto;
+  /* top: 300px; */
+}
+
+.article {
+  border: 1.5px solid var(--bleu);
+  border-radius: 0.3em;
+  box-shadow: 4px 5px 6px 0px #d0d0d0f0;
+  margin: 2vh 0;
+  /* background-color: var(--moinsBlanc); */
+  background-color: var(--white) !important;
+  padding: 1.5vh;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+/* l'affichage des infos du user */
+.cadre {
+  border: 1.5px solid var(--bleu);
+  border-radius: 0.3em;
+  box-shadow: 4px 5px 6px 0px #d0d0d0f0;
+  background-color: var(--moinsBlanc);
+  padding: 1em;
+  font-size: 0.8em;
+  /* height: 9.5vh; */
+}
+
+/* le font-family des $_SESSION */
+.user,
+div,
+p {
+  font-family: "Arimo", sans-serif;
+  line-height: 1.5em;
+  margin: 0;
+}
+
+/* $_SESSION['ok'] */
+.bon {
+  text-align: center;
+  color: var(--bleu);
+  font-size: 1em;
+  margin: 1vw 0;
+}
+
+.bon strong {
+  font-size: 1.3em;
+}
+
+.bold {
+  font-weight: bold;
+  width: 20%;
+}
+
+.cadre div {
+  width: 35vw;
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: nowrap; */
+}
+
+.cadre div p {
+  width: 40%;
+}
+
+/* fin infos user */
+
+/* le formulaire avis */
+#avisTomeEveil {
+  border: 1.5px solid var(--bleu);
+  border-radius: 0.3em;
+  box-shadow: 4px 5px 6px 0px #d0d0d0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh;
+  /* height: 42.4vh;
+  margin-bottom: 0; */
+  background-color: var(--moinsBlanc);
+}
+
+/* div contenant le label et le textarea */
+#msgavis {
+  display: flex;
+  flex-direction: row;
+  margin: 0vh 0 1vh 0;
+  width: 100%;
+  justify-content: center;
+  align-content: top;
+  margin-top: 1vh;
+}
+
+#msgavis label {
+  margin: 0;
+}
+
+/* div contenant input submit et les v-if et v-else-if en vueJs */
+#envois {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* l'ensemble des inputs radio */
+#selectionLivre {
+  padding: 0 1vw;
+  width: 100%;
+}
+
+/* la casse de la police */
+label,
+input,
+textarea,
+#selectionLivre {
+  font-size: 0.85em;
+  font-weight: 500;
+}
+
+/* div qui englobe les trois input radio des tomes des nocturnes */
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.rowTwo {
+  display: flex;
+  flex-direction: row;
+}
+
+.rowTwo .radio {
+  margin-left: 1vw;
+}
+/* debut inputs radio */
+.radio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 1vw 0 0;
+}
+
+input[type="radio"] {
+  margin: 0 0.5vw 0 0;
+}
+/* fin inputs radio */
+
+/* le label */
+label[for="Message"] {
+  margin: 1vh 0 2vh 0;
+  /* width: 20%; */
+}
+
+/* champ du message */
+[for="Message"] + textarea {
+  margin: 0 0;
+  padding: 2vh;
+  border: 0.5px solid var(--vert);
+  border-radius: 0.3em;
+  background-color: var(--white);
+  /* background-color: var(--moinsBlanc); */
+  /* width: 22vw;
+  height: 18vh; */
+  margin-left: 1vw;
+}
+
+/* le bouton pour envoyer */
+input[type="submit"] {
+  margin: 2vh 0 0 0;
+  /* height: 5vh;
+  width: 6vw; */
+  padding: 0;
+  font-size: 0.9em;
+  background-color: var(--vert);
+  color: var(--moinsBlanc);
+  font-weight: 600;
+  border: none;
+  border-radius: 0.4em;
+  box-shadow: 2px 2px 6px 0px #d1d1d1f0;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+/* message erreur si les entrées ne sont pas bonnes */
+#erreur {
+  color: var(--champErreur);
+  font-weight: 600;
+  font-size: 0.8em;
+  margin: 2vh;
+}
+
+/* message de validation */
+#valide {
+  color: var(--vert);
+  font-weight: 600;
+  font-size: 0.8em;
+  margin: 2vh;
+}
+
+/* message champs obligatoires */
+#obligatoire {
+  /* margin-left: -35vw; */
+  font-size: 0.7em;
+}
+
+/* desktop */
+@media (min-width: 1660px) {
+  /* pour que le footer soit bien en bas lorsqu'il y a des éléments dans le body */
+  .container-header,
+  .container-footer {
+    position: absolute;
+    /* position: sticky; */
+  }
+  /*  le main */
+  #log {
+    height: 73vh;
+  }
+
+  #position {
+    height: 90%;
+  }
+
+  #dedans {
+    grid-template-columns: 5% 32% 8% 50% 5%;
+    grid-template-rows: 18% 59% 10%;
+    gap: 3% 0;
+  }
+
+  /* la div qui contient le $_SESSION['affiche'] */
+  #afficheAvis {
+    /* box-shadow: 4px 5px 6px 0px #d0d0d0f0; */
+    height: 23.7vw;
+    width: 90%;
+  }
+
+  /* l'affichage des infos du user */
+  .cadre {
+    height: 9.5vh;
+    font-size: 0.9em;
+  }
+
+  /* le formulaire avis */
+  #avisTomeEveil {
+    height: 42.4vh;
+    margin-bottom: 0;
+  }
+  /* champ du message */
+  [for="Message"] + textarea {
+    width: 22vw;
+    height: 18vh;
+  }
+
+  /* le bouton pour envoyer */
+  input[type="submit"] {
+    height: 5vh;
+    width: 6vw;
+  }
+  /* la casse de la police */
+  label,
+  input,
+  textarea,
+  #selectionLivre {
+    font-size: 0.9em;
+    font-weight: 500;
+  }
+
+  #selectionLivre p {
+    padding-top: 2.5vh;
+    margin-top: -3.5vh;
+    margin-bottom: 3vh;
+  }
+
+  #selectionLivre {
+    margin-bottom: 3vh;
+  }
+
+  .deconn {
+    margin-top: 1.5vh;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1660px) {
+  /* pour que le footer soit bien en bas lorsqu'il y a des éléments dans le body */
+  .container-header,
+  .container-footer {
+    position: absolute;
+    /* position: sticky; */
+  }
+  /*  le main */
+  #log {
+    height: 73vh;
+  }
+  #dedans {
+    grid-template-columns: 5% 32% 8% 50% 5%;
+    grid-template-rows: 18% 52.5% 10%;
+    gap: 3% 0;
+  }
+
+  /* la div qui contient le $_SESSION['affiche'] */
+  #afficheAvis {
+    /* box-shadow: 4px 5px 6px 0px #d0d0d0f0; */
+    height: 27vw;
+    width: 90%;
+  }
+
+  /* l'affichage des infos du user */
+  .cadre {
+    height: 9.5vh;
+  }
+
+  /* le formulaire avis */
+  #avisTomeEveil {
+    height: 42.4vh;
+    margin-bottom: 0;
+  }
+  /* champ du message */
+  [for="Message"] + textarea {
+    width: 22vw;
+    height: 18vh;
+  }
+
+  /* le bouton pour envoyer */
+  input[type="submit"] {
+    height: 5vh;
+    width: 6vw;
+  }
+
+  .deconn {
+    margin-top: 1.45vh;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1399px) {
+  .container-header,
+  .container-footer {
+    position: absolute;
+    /* position: sticky; */
+  }
+
+  /*  le main */
+  #log {
+    height: 73vh;
+  }
+
+  #dedans {
+    grid-template-columns: 5% 32% 8% 50% 5%;
+    grid-template-rows: 20% 50% 10%;
+    gap: 3% 0;
+    height: 33vw;
+  }
+
+  /* la div qui contient le $_SESSION['affiche'] */
+  #afficheAvis {
+    /* box-shadow: 4px 5px 6px 0px #d0d0d0f0; */
+    height: 22vw;
+    width: 90%;
+  }
+
+  /* l'affichage des infos du user */
+  .cadre {
+    height: 9.5vh;
+    padding-top: -1vh;
+    line-height: -0.5em;
+  }
+
+  /* le formulaire avis */
+  #avisTomeEveil {
+    height: 40vh;
+    margin-bottom: 0;
+  }
+
+  /* champ du message */
+  [for="Message"] + textarea {
+    width: 22vw;
+    height: 18vh;
+  }
+
+  /* le bouton pour envoyer */
+  input[type="submit"] {
+    height: 5vh;
+    width: 6vw;
+  }
+
+  .deconn {
+    margin-top: 5.5vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-header {
+    position: fixed;
+    /* height: 40px; */
+    z-index: 10;
+  }
+  .container-footer {
+    position: fixed;
+    bottom: 0px !important;
+    z-index: 10;
+
+    /* position: sticky; */
+  }
+
+  /* le main */
+  #log {
+    z-index: 5;
+    /* overflow: auto; */
+    height: 60em;
+    overflow-block: scroll;
+    overflow-x: hidden;
+  }
+
+  #position {
+    height: 100%;
+  }
+  #dedans {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bon {
+    z-index: 5;
+    /* margin-top: -6vh; */
+    margin-bottom: 1vh;
+  }
+
+  .bord {
+    margin-bottom: 1vh;
+    width: 100%;
+  }
+
+  .cadre {
+    margin-top: 1vh;
+    height: 12vh;
+    width: 93%;
+  }
+
+  .cadre div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .cadre div p {
+    width: 50%;
+  }
+
+  #avis1 {
+    width: 90%;
+  }
+
+  #avisTomeEveil {
+    width: 100%;
+  }
+
+  #msgavis {
+    display: flex;
+    flex-direction: column;
+  }
+  #Message {
+    height: 20vh;
+  }
+
+  /* le bouton pour envoyer */
+  input[type="submit"] {
+    height: 5vh;
+    width: 20vw;
+    margin-bottom: 0.5vh;
+  }
+  #affichevis {
+    background-color: var(--moinsBlanc);
+    display: flex;
+    justify-content: center;
+  }
+
+  .article {
+    width: 93.5%;
+  }
+
+  .deconn {
+    width: 100%;
+    margin-top: 3vh;
+    display: flex;
+    justify-content: center;
+  }
+
+  .deconn button {
+    margin-right: 0;
+  }
+}

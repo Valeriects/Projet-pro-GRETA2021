@@ -1,0 +1,90 @@
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+  /* width: 45%;
+  height: 2.35em; */
+  border: 0.5px solid var(--bleu);
+  margin-left: 1vh;
+  border-radius: 0.2em;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected,
+.select-items {
+  background-color: var(--moinsBlanc);
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: var(--bleu) transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent var(--bleu) transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+  padding: 8px 5px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: var(--bleu);
+}
+
+@media (min-width: 1600px) {
+  .custom-select {
+    width: 10%;
+    height: 2.28em;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1600px) {
+  .custom-select {
+    width: 15%;
+    height: 2.2em;
+  }
+}
+@media (min-width: 768px) and (max-width: 1000px) {
+  .custom-select {
+    width: 20%;
+    height: 2.25em;
+  }
+}
+@media (max-width: 768px) {
+  .custom-select {
+    width: 100%;
+    height: 2.25em;
+  }
+}
